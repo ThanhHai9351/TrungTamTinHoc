@@ -9,3 +9,14 @@ D:\HK5\Winform\TrungTamTinHoc\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.csproj.Cor
 D:\HK5\Winform\TrungTamTinHoc\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.exe
 D:\HK5\Winform\TrungTamTinHoc\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.pdb
 D:\HK5\Winform\TrungTamTinHoc\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.Trangchu.resources
+D:\TrungTamTinHoc\TrungTamTinHoc\bin\Debug\TrungTamTinHoc.exe.config
+D:\TrungTamTinHoc\TrungTamTinHoc\bin\Debug\TrungTamTinHoc.exe
+D:\TrungTamTinHoc\TrungTamTinHoc\bin\Debug\TrungTamTinHoc.pdb
+D:\TrungTamTinHoc\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.csproj.AssemblyReference.cache
+D:\TrungTamTinHoc\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.Login.resources
+D:\TrungTamTinHoc\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.Trangchu.resources
+D:\TrungTamTinHoc\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.Properties.Resources.resources
+D:\TrungTamTinHoc\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.csproj.GenerateResource.cache
+D:\TrungTamTinHoc\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.csproj.CoreCompileInputs.cache
+D:\TrungTamTinHoc\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.exe
+D:\TrungTamTinHoc\TrungTamTinHoc\obj\Debug\TrungTamTinHoc.pdb
