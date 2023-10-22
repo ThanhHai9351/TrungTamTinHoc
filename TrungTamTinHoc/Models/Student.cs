@@ -19,6 +19,5 @@ namespace TrungTamTinHoc.Models
         public string Phone { get; set; }
 
         public DateTime Birthday { get; set; }
-
     }
 }
