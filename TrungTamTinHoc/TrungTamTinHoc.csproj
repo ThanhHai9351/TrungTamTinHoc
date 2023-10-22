@@ -47,10 +47,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\Login.cs">
+    <Compile Include="Forms\frmHomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Login.Designer.cs">
+    <Compile Include="Forms\frmHomeAdmin.Designer.cs">
+      <DependentUpon>frmHomeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHomeStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHomeStudent.Designer.cs">
+      <DependentUpon>frmHomeStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHomeTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHomeTeacher.Designer.cs">
+      <DependentUpon>frmHomeTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Courses.cs" />
@@ -59,53 +77,11 @@
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Form\Trangchu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Trangchu.Designer.cs">
-      <DependentUpon>Trangchu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\Home.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\LichHoc.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\LichHoc.Designer.cs">
-      <DependentUpon>LichHoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\QLGV.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\QLGV.Designer.cs">
-      <DependentUpon>QLGV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\QLHocVien.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\QLHocVien.Designer.cs">
-      <DependentUpon>QLHocVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\QLKH.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\QLKH.Designer.cs">
-      <DependentUpon>QLKH.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\Support.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\Support.Designer.cs">
-      <DependentUpon>Support.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Form\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmHomeAdmin.resx">
+      <DependentUpon>frmHomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Trangchu.resx">
-      <DependentUpon>Trangchu.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,24 +93,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControls\Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\LichHoc.resx">
-      <DependentUpon>LichHoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\QLGV.resx">
-      <DependentUpon>QLGV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\QLHocVien.resx">
-      <DependentUpon>QLHocVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\QLKH.resx">
-      <DependentUpon>QLKH.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\Support.resx">
-      <DependentUpon>Support.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -149,7 +107,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Image\Logohuit.png" />
     <Content Include="Image\Usericon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserControls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

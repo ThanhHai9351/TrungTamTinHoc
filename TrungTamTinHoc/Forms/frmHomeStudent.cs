@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TrungTamTinHoc.UserControls
+namespace TrungTamTinHoc.Forms
 {
-    public partial class QLHocVien : UserControl
+    public partial class frmHomeStudent : Form
     {
-        public QLHocVien()
+        public frmHomeStudent()
         {
             InitializeComponent();
         }

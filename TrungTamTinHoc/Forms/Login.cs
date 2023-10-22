@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrungTamTinHoc.Forms;
 
 namespace TrungTamTinHoc
 {
@@ -19,7 +20,10 @@ namespace TrungTamTinHoc
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            cbo_XacNhanUser.Items.Add("Phu Huynh");
+            cbo_XacNhanUser.Items.Add("Giao Vien");
+            cbo_XacNhanUser.Items.Add("Admin");
+            cbo_XacNhanUser.SelectedIndex = 0;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -43,14 +47,15 @@ namespace TrungTamTinHoc
             {
                 MessageBox.Show("Bạn chưa điền đầy đủ thông tin!");
             }    
-            else if(txtUser.Text!="admin"||txtPass.Text!="123")
+            else if(txtUser.Text!="admin"||txtPass.Text!="123"||cbo_XacNhanUser.SelectedItem.ToString()!="Admin")
             {
                 MessageBox.Show("Sai mật khẩu hoặc tài khoản!");
             }    
-            if (txtUser.Text=="admin"&&txtPass.Text=="123")
+            if (txtUser.Text=="admin"&&txtPass.Text=="123"&&cbo_XacNhanUser.SelectedItem.ToString()=="Admin")
             {
-                Trangchu frm = new Trangchu();
+                frmHomeAdmin frm = new frmHomeAdmin();
                 frm.Show();
+                this.Hide();
             }    
         }
 
@@ -79,5 +84,7 @@ namespace TrungTamTinHoc
                 this.errorProvider1.Clear();
             }
         }
+
+      
     }
 }
