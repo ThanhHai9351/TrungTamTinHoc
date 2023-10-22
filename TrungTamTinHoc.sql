@@ -30,13 +30,13 @@ CREATE TABLE Classrooms (
     FOREIGN KEY (TeacherID) REFERENCES Teacher(TeacherID),
 );
 CREATE TABLE AccountStudents(
-	AccountStudentsID char(10) PRIMARY KEY,
+	AccountStudentsID int IDENTITY(1,1) PRIMARY KEY,
 	StudentID char(10) not null,
 	Passwd char(10) not null,
 	FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
 )
 CREATE TABLE AccountTeachers(
-	AccountTeachersID char(10) PRIMARY KEY,
+	AccountTeachersID int IDENTITY(1,1) PRIMARY KEY,
 	TeacherID char(10) not null,
 	Passwd char(10) not null,
 	FOREIGN KEY (TeacherID) REFERENCES Teacher(TeacherID)
@@ -72,23 +72,37 @@ ON MANAGERCLASS
 AFTER INSERT, DELETE
 AS
 BEGIN
-    DECLARE @InsertedClassroomId char(10);
-    SELECT @InsertedClassroomId = ClassroomId FROM INSERTED;
-    IF @InsertedClassroomId IS NOT NULL
-    BEGIN
-        UPDATE Classrooms 
-        SET Capacity = Capacity + 1 
-        WHERE ClassroomId = @InsertedClassroomId;
-    END
+    UPDATE c
+    SET Capacity = Capacity + i.Cnt
+    FROM Classrooms c
+    INNER JOIN (SELECT ClassroomId, COUNT(*) as Cnt FROM INSERTED GROUP BY ClassroomId) i
+    ON c.ClassroomId = i.ClassroomId;
 
-    DECLARE @DeletedClassroomId char(10);
-    SELECT @DeletedClassroomId = ClassroomId FROM DELETED;
-    IF @DeletedClassroomId IS NOT NULL
-    BEGIN
-        UPDATE Classrooms 
-        SET Capacity = Capacity - 1 
-        WHERE ClassroomId = @DeletedClassroomId;
-    END
+    UPDATE c
+    SET Capacity = Capacity - d.Cnt
+    FROM Classrooms c
+    INNER JOIN (SELECT ClassroomId, COUNT(*) as Cnt FROM DELETED GROUP BY ClassroomId) d
+    ON c.ClassroomId = d.ClassroomId;
+END
+GO
+CREATE TRIGGER tr_AutoCreateStudentAccount 
+ON Student
+AFTER INSERT
+AS
+BEGIN
+    INSERT INTO AccountStudents (StudentID, Passwd)
+    SELECT StudentID, 'mk10'
+    FROM INSERTED
+END
+GO
+CREATE TRIGGER tr_AutoCreateTeacherAccount 
+ON Teacher
+AFTER INSERT
+AS
+BEGIN
+    INSERT INTO AccountTeachers (TeacherID, Passwd)
+    SELECT TeacherID, 'mk10'
+    FROM INSERTED
 END
 GO
 INSERT INTO Student 
@@ -155,50 +169,50 @@ VALUES
 SELECT * FROM Classrooms
 INSERT INTO AccountStudents
 VALUES 
-('A001', 'S001', 'mk10'),
-('A002', 'S002', 'mk10'),
-('A003', 'S003', 'mk10'),
-('A004', 'S004', 'mk10'),
-('A005', 'S005', 'mk10'),
-('A006', 'S006', 'mk10'),
-('A007', 'S007', 'mk10'),
-('A008', 'S008', 'mk10'),
-('A009', 'S009', 'mk10'),
-('A010', 'S010', 'mk10'),
-('A011', 'S011', 'mk10'),
-('A012', 'S012', 'mk10'),
-('A013', 'S013', 'mk10'),
-('A014', 'S014', 'mk10'),
-('A015', 'S015', 'mk10'),
-('A016', 'S016', 'mk10'),
-('A017', 'S017', 'mk10'),
-('A018', 'S018', 'mk10'),
-('A019', 'S019', 'mk10'),
-('A020', 'S020', 'mk10'),
-('A021', 'S021', 'mk10'),
-('A022', 'S022', 'mk10'),
-('A023', 'S023', 'mk10'),
-('A024', 'S024', 'mk10'),
-('A025', 'S025', 'mk10'),
-('A026', 'S026', 'mk10'),
-('A027', 'S027', 'mk10'),
-('A028', 'S028', 'mk10'),
-('A029', 'S029', 'mk10'),
-('A030', 'S030', 'mk10')
+('S001', 'mk10'),
+('S002', 'mk10'),
+('S003', 'mk10'),
+('S004', 'mk10'),
+('S005', 'mk10'),
+('S006', 'mk10'),
+('S007', 'mk10'),
+('S008', 'mk10'),
+('S009', 'mk10'),
+('S010', 'mk10'),
+('S011', 'mk10'),
+('S012', 'mk10'),
+('S013', 'mk10'),
+('S014', 'mk10'),
+('S015', 'mk10'),
+('S016', 'mk10'),
+('S017', 'mk10'),
+('S018', 'mk10'),
+('S019', 'mk10'),
+('S020', 'mk10'),
+('S021', 'mk10'),
+('S022', 'mk10'),
+('S023', 'mk10'),
+('S024', 'mk10'),
+('S025', 'mk10'),
+('S026', 'mk10'),
+('S027', 'mk10'),
+('S028', 'mk10'),
+('S029', 'mk10'),
+('S030', 'mk10')
 
 SELECT * FROM AccountStudents
 INSERT INTO AccountTeachers
 VALUES 
-('AT001', 'T001', 'mk01'),
-('AT002', 'T002', 'mk02'),
-('AT003', 'T003', 'mk03'),
-('AT004', 'T004', 'mk04'),
-('AT005', 'T005', 'mk05'),
-('AT006', 'T006', 'mk06'),
-('AT007', 'T007', 'mk07'),
-('AT008', 'T008', 'mk08'),
-('AT009', 'T009', 'mk09'),
-('AT010', 'T010', 'mk10')
+('T001', 'mk10'),
+('T002', 'mk10'),
+('T003', 'mk10'),
+('T004', 'mk10'),
+('T005', 'mk10'),
+('T006', 'mk10'),
+('T007', 'mk10'),
+('T008', 'mk10'),
+('T009', 'mk10'),
+('T010', 'mk10')
 
 SELECT * FROM AccountTeachers
 INSERT INTO PAYMENTS
