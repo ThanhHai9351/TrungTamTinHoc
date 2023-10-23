@@ -6,18 +6,14 @@ using System.Threading.Tasks;
 
 namespace TrungTamTinHoc.Models
 {
-    public class Courses
+    public class Schedule
     {
-        public string CourseID { get; set; }
+        public string ScheduleID { get; set; }
 
-        public string CourseName { get; set; }
-
-        public string Description { get; set; }
-
-        public DateTime StartDate{ get; set; }
+        public DateTime StartDate { get; set; }
 
         public DateTime EndDate { get; set; }
 
-
+        public string ClassroomID { get; set; }
     }
 }

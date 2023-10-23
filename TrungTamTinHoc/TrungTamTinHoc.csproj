@@ -71,8 +71,13 @@
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Courses.cs" />
-    <Compile Include="Models\Enrollment.cs" />
+    <Compile Include="Models\Accountstudents.cs" />
+    <Compile Include="Models\AccountTeachers.cs" />
+    <Compile Include="Models\Classrooms.cs" />
+    <Compile Include="Models\CompanyDB.cs" />
+    <Compile Include="Models\ManagerClass.cs" />
+    <Compile Include="Models\Payments.cs" />
+    <Compile Include="Models\Schedule.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Program.cs" />
