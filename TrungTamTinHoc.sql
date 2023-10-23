@@ -29,18 +29,6 @@ CREATE TABLE Classrooms (
     AmountOfMoney money,
     FOREIGN KEY (TeacherID) REFERENCES Teacher(TeacherID),
 );
-CREATE TABLE AccountStudents(
-	AccountStudentsID int IDENTITY(1,1) PRIMARY KEY,
-	StudentID char(10) not null,
-	Passwd char(10) not null,
-	FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
-)
-CREATE TABLE AccountTeachers(
-	AccountTeachersID int IDENTITY(1,1) PRIMARY KEY,
-	TeacherID char(10) not null,
-	Passwd char(10) not null,
-	FOREIGN KEY (TeacherID) REFERENCES Teacher(TeacherID)
-)
 CREATE TABLE PAYMENTS(
 	PaymentsID char(10) PRIMARY KEY,
 	StudentID char(10) not null,
@@ -83,26 +71,6 @@ BEGIN
     FROM Classrooms c
     INNER JOIN (SELECT ClassroomId, COUNT(*) as Cnt FROM DELETED GROUP BY ClassroomId) d
     ON c.ClassroomId = d.ClassroomId;
-END
-GO
-CREATE TRIGGER tr_AutoCreateStudentAccount 
-ON Student
-AFTER INSERT
-AS
-BEGIN
-    INSERT INTO AccountStudents (StudentID, Passwd)
-    SELECT StudentID, 'mk10'
-    FROM INSERTED
-END
-GO
-CREATE TRIGGER tr_AutoCreateTeacherAccount 
-ON Teacher
-AFTER INSERT
-AS
-BEGIN
-    INSERT INTO AccountTeachers (TeacherID, Passwd)
-    SELECT TeacherID, 'mk10'
-    FROM INSERTED
 END
 GO
 INSERT INTO Student 
@@ -167,54 +135,6 @@ VALUES
 ('C010', N'Kĩ thuật lập trình', 0, 'T010', 5400000)
 
 SELECT * FROM Classrooms
-INSERT INTO AccountStudents
-VALUES 
-('S001', 'mk10'),
-('S002', 'mk10'),
-('S003', 'mk10'),
-('S004', 'mk10'),
-('S005', 'mk10'),
-('S006', 'mk10'),
-('S007', 'mk10'),
-('S008', 'mk10'),
-('S009', 'mk10'),
-('S010', 'mk10'),
-('S011', 'mk10'),
-('S012', 'mk10'),
-('S013', 'mk10'),
-('S014', 'mk10'),
-('S015', 'mk10'),
-('S016', 'mk10'),
-('S017', 'mk10'),
-('S018', 'mk10'),
-('S019', 'mk10'),
-('S020', 'mk10'),
-('S021', 'mk10'),
-('S022', 'mk10'),
-('S023', 'mk10'),
-('S024', 'mk10'),
-('S025', 'mk10'),
-('S026', 'mk10'),
-('S027', 'mk10'),
-('S028', 'mk10'),
-('S029', 'mk10'),
-('S030', 'mk10')
-
-SELECT * FROM AccountStudents
-INSERT INTO AccountTeachers
-VALUES 
-('T001', 'mk10'),
-('T002', 'mk10'),
-('T003', 'mk10'),
-('T004', 'mk10'),
-('T005', 'mk10'),
-('T006', 'mk10'),
-('T007', 'mk10'),
-('T008', 'mk10'),
-('T009', 'mk10'),
-('T010', 'mk10')
-
-SELECT * FROM AccountTeachers
 INSERT INTO PAYMENTS
 VALUES 
 ('PMT001', 'S001', 'C001', 1000000, 'No'),
