@@ -56,6 +56,10 @@ namespace TrungTamTinHoc.UserControls
 
         private void CreateHocSinh_Load(object sender, EventArgs e)
         {
+            txtEmail.Enabled = false;
+            txtPhone.Enabled = false;
+            txtEmail.Enabled = false;
+            dt_Birthday.Enabled = false;
             CompanyDB db = new CompanyDB();
             cbo_Option.Items.Add("Giáo Viên");
             cbo_Option.Items.Add("Lớp");
@@ -238,6 +242,73 @@ namespace TrungTamTinHoc.UserControls
                 i.SubItems.Add(item.Birthday.ToString());
                 lv_Student.Items.Add(i);
             }
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            CompanyDB db = new CompanyDB();
+            if (connection == null)
+            {
+                connection = new SqlConnection(db.strcon);
+            }
+            if (connection.State == ConnectionState.Closed)
+            {
+                connection.Open();
+            }
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "insert into Student values (@ma,@first,@last,@email,@phone,@sn)";
+            command.Connection = connection;
+
+            command.Parameters.Add("@ma", SqlDbType.Char).Value = txtId.Text.TrimEnd();
+            command.Parameters.Add("@first", SqlDbType.NVarChar).Value = txtFirstName.Text.TrimEnd();
+            command.Parameters.Add("@last", SqlDbType.NVarChar).Value = txtLastName.Text.TrimEnd();
+            command.Parameters.Add("@email", SqlDbType.Char).Value = txtEmail.Text.TrimEnd();
+            command.Parameters.Add("@phone", SqlDbType.Char).Value = txtPhone.Text.TrimEnd();
+            command.Parameters.Add("@sn", SqlDbType.DateTime).Value = dt_Birthday.Value;
+
+
+            int ret = command.ExecuteNonQuery();
+            if(ret>0)
+            {
+                MessageBox.Show("Bạn đã thêm thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Bạn đã thêm thất bại!");
+            }
+
+        }
+
+        public bool checkID(string str)
+        {
+            CompanyDB db = new CompanyDB();
+            List<Student> students = db.GetStudents();
+            foreach(var item in students)
+            {
+                if (item.StudentID.TrimEnd() == str)
+                    return false;
+            }
+            return true;
+        }
+
+        private void txtId_Leave(object sender, EventArgs e)
+        {
+            if(txtId.Text=="")
+            {
+                this.errorProvider1.SetError(txtId, "ID không được trống");
+            }
+            else if (!checkID(txtId.Text.TrimEnd()))
+            {
+                this.errorProvider1.SetError(txtId, "ID này đã tồn tại!");
+            }
+            else
+            {
+                this.errorProvider1.Clear();
+                txtEmail.Enabled = true;
+                txtPhone.Enabled = true;
+                dt_Birthday.Enabled = true;
+            }    
         }
     }
 }

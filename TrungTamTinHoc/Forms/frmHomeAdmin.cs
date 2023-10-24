@@ -117,5 +117,11 @@ namespace TrungTamTinHoc.Forms
             CreateHocSinh frm = new CreateHocSinh();
             addUserControl(frm);
         }
+
+        private void btnEditDeleteHS_Click(object sender, EventArgs e)
+        {
+            EditDeleteHocSinh frm = new EditDeleteHocSinh();
+            addUserControl(frm);
+        }
     }
 }

@@ -74,6 +74,12 @@
     <Compile Include="UserControls\CreateHocSinh.Designer.cs">
       <DependentUpon>CreateHocSinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\EditDeleteHocSinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditDeleteHocSinh.Designer.cs">
+      <DependentUpon>EditDeleteHocSinh.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\frmHomeAdmin.resx">
       <DependentUpon>frmHomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +99,9 @@
     <EmbeddedResource Include="UserControls\CreateHocSinh.resx">
       <DependentUpon>CreateHocSinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\EditDeleteHocSinh.resx">
+      <DependentUpon>EditDeleteHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -107,6 +116,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Image\add-user.png" />
     <Content Include="Image\add.png" />
     <Content Include="Image\Class.png" />
     <Content Include="Image\editdelete.png" />

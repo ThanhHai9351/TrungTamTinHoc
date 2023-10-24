@@ -321,6 +321,7 @@ namespace TrungTamTinHoc.Forms
             this.btnEditDeleteHS.Text = "Sửa,Xóa Học Sinh";
             this.btnEditDeleteHS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditDeleteHS.UseVisualStyleBackColor = false;
+            this.btnEditDeleteHS.Click += new System.EventHandler(this.btnEditDeleteHS_Click);
             // 
             // btnAddHS
             // 
