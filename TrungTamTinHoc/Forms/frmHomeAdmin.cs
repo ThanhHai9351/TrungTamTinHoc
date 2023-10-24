@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrungTamTinHoc.UserControls;
 
 namespace TrungTamTinHoc.Forms
 {
@@ -20,8 +21,8 @@ namespace TrungTamTinHoc.Forms
         public void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
-            panelContainer.Controls.Clear();
-            panelContainer.Controls.Add(userControl);
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(userControl);
             userControl.BringToFront();
         }
 
@@ -99,13 +100,22 @@ namespace TrungTamTinHoc.Forms
             {
                 e.Cancel = true;
             }
+            else
+            {
+                Login frm = new Login();
+                frm.Show();
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-            Login frm = new Login();
-            frm.Show();
+        }
+
+        private void btnAddHS_Click(object sender, EventArgs e)
+        {
+            CreateHocSinh frm = new CreateHocSinh();
+            addUserControl(frm);
         }
     }
 }

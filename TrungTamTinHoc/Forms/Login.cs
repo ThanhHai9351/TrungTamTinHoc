@@ -20,10 +20,7 @@ namespace TrungTamTinHoc
 
         private void Login_Load(object sender, EventArgs e)
         {
-            cbo_XacNhanUser.Items.Add("Phu Huynh");
-            cbo_XacNhanUser.Items.Add("Giao Vien");
-            cbo_XacNhanUser.Items.Add("Admin");
-            cbo_XacNhanUser.SelectedIndex = 0;
+         
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -47,11 +44,11 @@ namespace TrungTamTinHoc
             {
                 MessageBox.Show("Bạn chưa điền đầy đủ thông tin!");
             }    
-            else if(txtUser.Text!="admin"||txtPass.Text!="123"||cbo_XacNhanUser.SelectedItem.ToString()!="Admin")
+            else if(txtUser.Text!="admin"||txtPass.Text!="123")
             {
                 MessageBox.Show("Sai mật khẩu hoặc tài khoản!");
             }    
-            if (txtUser.Text=="admin"&&txtPass.Text=="123"&&cbo_XacNhanUser.SelectedItem.ToString()=="Admin")
+            if (txtUser.Text=="admin"&&txtPass.Text=="123")
             {
                 frmHomeAdmin frm = new frmHomeAdmin();
                 frm.Show();
@@ -85,6 +82,9 @@ namespace TrungTamTinHoc
             }
         }
 
-      
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
