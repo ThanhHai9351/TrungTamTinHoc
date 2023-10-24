@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrungTamTinHoc.Forms;
 
 namespace TrungTamTinHoc
 {
@@ -16,7 +17,7 @@ namespace TrungTamTinHoc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new frmHomeAdmin());
         }
     }
 }

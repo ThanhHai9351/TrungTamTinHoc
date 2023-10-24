@@ -17,5 +17,7 @@ namespace TrungTamTinHoc.Models
         public int AmountOfMoney { get; set; }
 
         public string Active { get; set; }
+
+        public DateTime MoneyDate { get; set; }
     }
 }

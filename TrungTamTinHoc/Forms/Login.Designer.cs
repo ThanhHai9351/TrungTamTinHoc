@@ -43,7 +43,6 @@ namespace TrungTamTinHoc
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbo_XacNhanUser = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -104,6 +103,7 @@ namespace TrungTamTinHoc
             this.btnExit.TabIndex = 15;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnLogin
             // 
@@ -171,21 +171,12 @@ namespace TrungTamTinHoc
             this.label1.TabIndex = 9;
             this.label1.Text = "Login";
             // 
-            // cbo_XacNhanUser
-            // 
-            this.cbo_XacNhanUser.FormattingEnabled = true;
-            this.cbo_XacNhanUser.Location = new System.Drawing.Point(888, 152);
-            this.cbo_XacNhanUser.Name = "cbo_XacNhanUser";
-            this.cbo_XacNhanUser.Size = new System.Drawing.Size(121, 24);
-            this.cbo_XacNhanUser.TabIndex = 17;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1030, 450);
-            this.Controls.Add(this.cbo_XacNhanUser);
+            this.ClientSize = new System.Drawing.Size(965, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
@@ -212,7 +203,6 @@ namespace TrungTamTinHoc
         #endregion
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.ComboBox cbo_XacNhanUser;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
