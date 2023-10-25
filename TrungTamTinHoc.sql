@@ -203,5 +203,16 @@ RETURN
     WHERE CONCAT_WS(' ', StudentID, FirstName, LastName, Email, Phone) LIKE '%' + @searchTerm + '%'
 );
 
+CREATE FUNCTION SearchTeachers (@searchTerm NVARCHAR(100))
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT * FROM Teacher
+    WHERE CONCAT_WS(' ', TeacherID, FirstName, LastName, Email, Phone) LIKE '%' + @searchTerm + '%'
+);
+
 SELECT * FROM dbo.SearchStudents('001');
+SELECT * FROM dbo.SearchTeachers('001');
+
 

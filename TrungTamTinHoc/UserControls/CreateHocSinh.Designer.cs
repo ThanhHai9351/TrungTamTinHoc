@@ -41,6 +41,19 @@ namespace TrungTamTinHoc.UserControls
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dt_Birthday = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtMa = new System.Windows.Forms.Label();
             this.lv_Student = new System.Windows.Forms.ListView();
             this.ma = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ho = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -48,19 +61,6 @@ namespace TrungTamTinHoc.UserControls
             this.email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.birthday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtMa = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtLastName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dt_Birthday = new System.Windows.Forms.DateTimePicker();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -189,6 +189,125 @@ namespace TrungTamTinHoc.UserControls
             this.panelMain.Size = new System.Drawing.Size(723, 456);
             this.panelMain.TabIndex = 2;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Silver;
+            this.groupBox1.Controls.Add(this.dt_Birthday);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.txtPhone);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtLastName);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtFirstName);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtId);
+            this.groupBox1.Controls.Add(this.txtMa);
+            this.groupBox1.Location = new System.Drawing.Point(21, 222);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(571, 201);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông Tin Học Sinh";
+            // 
+            // dt_Birthday
+            // 
+            this.dt_Birthday.Location = new System.Drawing.Point(379, 122);
+            this.dt_Birthday.Name = "dt_Birthday";
+            this.dt_Birthday.Size = new System.Drawing.Size(157, 22);
+            this.dt_Birthday.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(292, 127);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 17);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Birthday";
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(383, 81);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(153, 22);
+            this.txtPhone.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(292, 81);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 17);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Phone";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(383, 37);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(153, 22);
+            this.txtEmail.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(292, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Email:";
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.Location = new System.Drawing.Point(109, 127);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(153, 22);
+            this.txtLastName.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Last Name:";
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.Location = new System.Drawing.Point(109, 81);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(153, 22);
+            this.txtFirstName.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "First Name:";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(109, 37);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(153, 22);
+            this.txtId.TabIndex = 1;
+            this.txtId.Leave += new System.EventHandler(this.txtId_Leave);
+            // 
+            // txtMa
+            // 
+            this.txtMa.AutoSize = true;
+            this.txtMa.Location = new System.Drawing.Point(18, 37);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.Size = new System.Drawing.Size(78, 17);
+            this.txtMa.TabIndex = 0;
+            this.txtMa.Text = "Student ID:";
+            // 
             // lv_Student
             // 
             this.lv_Student.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -241,125 +360,6 @@ namespace TrungTamTinHoc.UserControls
             // 
             this.birthday.Text = "Birthday";
             this.birthday.Width = 245;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Silver;
-            this.groupBox1.Controls.Add(this.dt_Birthday);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtPhone);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtLastName);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtFirstName);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtId);
-            this.groupBox1.Controls.Add(this.txtMa);
-            this.groupBox1.Location = new System.Drawing.Point(21, 222);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(571, 201);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông Tin Học Sinh";
-            // 
-            // txtMa
-            // 
-            this.txtMa.AutoSize = true;
-            this.txtMa.Location = new System.Drawing.Point(18, 37);
-            this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(78, 17);
-            this.txtMa.TabIndex = 0;
-            this.txtMa.Text = "Student ID:";
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(109, 37);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(153, 22);
-            this.txtId.TabIndex = 1;
-            this.txtId.Leave += new System.EventHandler(this.txtId_Leave);
-            // 
-            // txtFirstName
-            // 
-            this.txtFirstName.Location = new System.Drawing.Point(109, 81);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(153, 22);
-            this.txtFirstName.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "First Name:";
-            // 
-            // txtLastName
-            // 
-            this.txtLastName.Location = new System.Drawing.Point(109, 127);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(153, 22);
-            this.txtLastName.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Last Name:";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(383, 37);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(153, 22);
-            this.txtEmail.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(292, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Email:";
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Location = new System.Drawing.Point(383, 81);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(153, 22);
-            this.txtPhone.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(292, 81);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 17);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Phone";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(292, 127);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 17);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Birthday";
-            // 
-            // dt_Birthday
-            // 
-            this.dt_Birthday.Location = new System.Drawing.Point(379, 122);
-            this.dt_Birthday.Name = "dt_Birthday";
-            this.dt_Birthday.Size = new System.Drawing.Size(157, 22);
-            this.dt_Birthday.TabIndex = 11;
             // 
             // errorProvider1
             // 

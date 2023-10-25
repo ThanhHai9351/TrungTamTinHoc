@@ -123,5 +123,17 @@ namespace TrungTamTinHoc.Forms
             EditDeleteHocSinh frm = new EditDeleteHocSinh();
             addUserControl(frm);
         }
+
+        private void btnThemGV_Click(object sender, EventArgs e)
+        {
+            CreateGV frm = new CreateGV();
+            addUserControl(frm);
+        }
+
+        private void btnEditDeleteGV_Click(object sender, EventArgs e)
+        {
+            EditDeleteGV frm = new EditDeleteGV();
+            addUserControl(frm);
+        }
     }
 }

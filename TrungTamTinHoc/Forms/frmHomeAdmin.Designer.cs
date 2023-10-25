@@ -252,6 +252,7 @@ namespace TrungTamTinHoc.Forms
             this.btnEditDeleteGV.Text = "Sửa,Xóa Giáo Viên";
             this.btnEditDeleteGV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditDeleteGV.UseVisualStyleBackColor = false;
+            this.btnEditDeleteGV.Click += new System.EventHandler(this.btnEditDeleteGV_Click);
             // 
             // btnThemGV
             // 
@@ -271,6 +272,7 @@ namespace TrungTamTinHoc.Forms
             this.btnThemGV.Text = "Thêm Giáo Viên";
             this.btnThemGV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThemGV.UseVisualStyleBackColor = false;
+            this.btnThemGV.Click += new System.EventHandler(this.btnThemGV_Click);
             // 
             // btnGV
             // 

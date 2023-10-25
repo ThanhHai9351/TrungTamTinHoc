@@ -230,6 +230,7 @@ namespace TrungTamTinHoc.UserControls
             cbo_Select.Text = "";
             cbo_Select.Enabled = false;
             txtSearch.Text = "";
+            lv_Student.Items.Clear();
             CompanyDB db = new CompanyDB();
             List<Student> students = db.GetStudents();
             foreach (var item in students)
@@ -242,6 +243,14 @@ namespace TrungTamTinHoc.UserControls
                 i.SubItems.Add(item.Birthday.ToString());
                 lv_Student.Items.Add(i);
             }
+            txtId.Text = "";
+            txtEmail.Text = "";
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtPhone.Text = "";
+            txtEmail.Enabled = false;
+            txtPhone.Enabled = false;
+            dt_Birthday.Enabled = false;
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -272,6 +281,14 @@ namespace TrungTamTinHoc.UserControls
             if(ret>0)
             {
                 MessageBox.Show("Bạn đã thêm thành công!");
+                txtId.Text = "";
+                txtEmail.Text = "";
+                txtFirstName.Text = "";
+                txtLastName.Text = "";
+                txtPhone.Text = "";
+                txtEmail.Enabled = false;
+                txtPhone.Enabled = false;
+                dt_Birthday.Enabled = false;
             }
             else
             {
