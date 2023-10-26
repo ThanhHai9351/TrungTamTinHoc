@@ -112,7 +112,7 @@ namespace TrungTamTinHoc.UserControls
             {
                 connection.Open();
             }
-            List<ManagerClass> managerClasses = db.GetManagerClasses();
+            List<Models.ManagerClass> managerClasses = db.GetManagerClasses();
             List<Teacher> teachers = db.GetTeachers();
             List<Classrooms> classrooms = db.GetClassrooms();
             string magv = "";
@@ -325,5 +325,7 @@ namespace TrungTamTinHoc.UserControls
                 }
             }    
         }
+
+       
     }
 }

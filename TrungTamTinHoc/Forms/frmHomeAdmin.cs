@@ -100,11 +100,6 @@ namespace TrungTamTinHoc.Forms
             {
                 e.Cancel = true;
             }
-            else
-            {
-                Login frm = new Login();
-                frm.Show();
-            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -133,6 +128,42 @@ namespace TrungTamTinHoc.Forms
         private void btnEditDeleteGV_Click(object sender, EventArgs e)
         {
             EditDeleteGV frm = new EditDeleteGV();
+            addUserControl(frm);
+        }
+
+        private void btnAddLop_Click(object sender, EventArgs e)
+        {
+            CreateLop frm = new CreateLop();
+            addUserControl(frm);
+        }
+
+        private void btnEditDeleteLop_Click(object sender, EventArgs e)
+        {
+            EditDeleteLop frm = new EditDeleteLop();
+            addUserControl(frm);
+        }
+
+        private void btnThongTinLop_Click(object sender, EventArgs e)
+        {
+            ThongTinLop frm = new ThongTinLop();
+            addUserControl(frm);
+        }
+
+        private void btnLichHoc_Click(object sender, EventArgs e)
+        {
+            LichHoc frm = new LichHoc();
+            addUserControl(frm);
+        }
+
+        private void btnSupport_Click(object sender, EventArgs e)
+        {
+            Support frm = new Support();
+            addUserControl(frm);
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            Report frm = new Report();
             addUserControl(frm);
         }
     }

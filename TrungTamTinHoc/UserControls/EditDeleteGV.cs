@@ -91,10 +91,14 @@ namespace TrungTamTinHoc.UserControls
         {
             cbo_Select.Items.Clear();
             lv_Student.Items.Clear();
-            txtEmail.Enabled = false;
-            txtPhone.Enabled = false;
-            txtEmail.Enabled = false;
-            dt_Birthday.Enabled = false;
+            txtSearch.Text = "";
+            txtEmail.Text = "";
+            txtPhone.Text = "";
+            txtEmail.Text = "";
+            dt_Birthday.Text = "";
+            txtId.Text = "";
+            txtLastName.Text = "";
+            txtFirstName.Text = "";
             CompanyDB db = new CompanyDB();
             List<Teacher> teachers = db.GetTeachers();
             foreach (var item in teachers)
@@ -125,7 +129,7 @@ namespace TrungTamTinHoc.UserControls
             {
                 connection.Open();
             }
-            List<ManagerClass> managerClasses = db.GetManagerClasses();
+            List<Models.ManagerClass> managerClasses = db.GetManagerClasses();
             List<Teacher> teachers = db.GetTeachers();
             List<Classrooms> classrooms = db.GetClassrooms();
             string malop = "";

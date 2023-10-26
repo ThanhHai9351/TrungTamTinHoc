@@ -36,6 +36,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,6 +61,12 @@
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ThongTinChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThongTinChiTiet.Designer.cs">
+      <DependentUpon>ThongTinChiTiet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Classrooms.cs" />
     <Compile Include="Models\CompanyDB.cs" />
     <Compile Include="Models\ManagerClass.cs" />
@@ -80,6 +88,12 @@
     <Compile Include="UserControls\CreateHocSinh.Designer.cs">
       <DependentUpon>CreateHocSinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CreateLop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CreateLop.Designer.cs">
+      <DependentUpon>CreateLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\EditDeleteGV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,11 +106,44 @@
     <Compile Include="UserControls\EditDeleteHocSinh.Designer.cs">
       <DependentUpon>EditDeleteHocSinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\EditDeleteLop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\EditDeleteLop.Designer.cs">
+      <DependentUpon>EditDeleteLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LichHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\LichHoc.Designer.cs">
+      <DependentUpon>LichHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Support.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Support.Designer.cs">
+      <DependentUpon>Support.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ThongTinLop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ThongTinLop.Designer.cs">
+      <DependentUpon>ThongTinLop.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\frmHomeAdmin.resx">
       <DependentUpon>frmHomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThongTinChiTiet.resx">
+      <DependentUpon>ThongTinChiTiet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,11 +161,29 @@
     <EmbeddedResource Include="UserControls\CreateHocSinh.resx">
       <DependentUpon>CreateHocSinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CreateLop.resx">
+      <DependentUpon>CreateLop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\EditDeleteGV.resx">
       <DependentUpon>EditDeleteGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\EditDeleteHocSinh.resx">
       <DependentUpon>EditDeleteHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\EditDeleteLop.resx">
+      <DependentUpon>EditDeleteLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\LichHoc.resx">
+      <DependentUpon>LichHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Support.resx">
+      <DependentUpon>Support.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ThongTinLop.resx">
+      <DependentUpon>ThongTinLop.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -144,8 +209,11 @@
     <Content Include="Image\Loading.png" />
     <Content Include="Image\Logohuit.png" />
     <Content Include="Image\logout.png" />
+    <Content Include="Image\personal-information.png" />
     <Content Include="Image\report.png" />
     <Content Include="Image\teacher.png" />
+    <Content Include="Image\timetable.png" />
+    <Content Include="Image\training.png" />
     <Content Include="Image\Usericon.png" />
   </ItemGroup>
   <ItemGroup />

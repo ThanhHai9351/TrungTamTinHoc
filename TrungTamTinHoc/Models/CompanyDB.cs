@@ -120,7 +120,7 @@ namespace TrungTamTinHoc.Models
             }
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "Select * from PAYMENTS";
+            command.CommandText = "select * from PAYMENTS where MoneyDate is not null";
             command.Connection = connection;
 
             SqlDataReader reader = command.ExecuteReader();
@@ -163,6 +163,7 @@ namespace TrungTamTinHoc.Models
                 st.StartDate = reader.GetDateTime(1);
                 st.EndDate = reader.GetDateTime(2);
                 st.ClassroomID = reader.GetString(3);
+                st.Ca = reader.GetInt32(4);
                 lst.Add(st);
             }
             reader.Close();

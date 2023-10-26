@@ -68,7 +68,7 @@ namespace TrungTamTinHoc.UserControls
             {
                 connection.Open();
             }
-            List<ManagerClass> managerClasses = db.GetManagerClasses();
+            List<Models.ManagerClass> managerClasses = db.GetManagerClasses();
             List<Teacher> teachers = db.GetTeachers();
             List<Classrooms> classrooms = db.GetClassrooms();
             string malop = "";
@@ -124,6 +124,12 @@ namespace TrungTamTinHoc.UserControls
         {
             cbo_Select.Items.Clear();
             lv_Student.Items.Clear();
+            txtSearch.Text = "";
+            txtId.Text = "";
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtEmail.Text = "";
+            txtPhone.Text = "";
             txtEmail.Enabled = false;
             txtPhone.Enabled = false;
             txtEmail.Enabled = false;
@@ -206,6 +212,15 @@ namespace TrungTamTinHoc.UserControls
             if (ret > 0)
             {
                 MessageBox.Show("Bạn đã thêm thành công!");
+                txtId.Text = "";
+                txtFirstName.Text = "";
+                txtLastName.Text = "";
+                txtEmail.Text = "";
+                txtPhone.Text = "";
+                txtEmail.Enabled = false;
+                txtPhone.Enabled = false;
+                txtEmail.Enabled = false;
+                dt_Birthday.Enabled = false;
             }
             else
             {

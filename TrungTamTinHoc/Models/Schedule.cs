@@ -15,5 +15,7 @@ namespace TrungTamTinHoc.Models
         public DateTime EndDate { get; set; }
 
         public string ClassroomID { get; set; }
+
+        public int Ca { get; set; }
     }
 }

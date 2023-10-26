@@ -32,17 +32,18 @@ namespace TrungTamTinHoc.UserControls
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateGV));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ten = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ho = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ma = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lv_Student = new System.Windows.Forms.ListView();
-            this.birthday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dt_Birthday = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@ namespace TrungTamTinHoc.UserControls
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtMa = new System.Windows.Forms.Label();
-            this.panelMain = new System.Windows.Forms.Panel();
             this.btnCreate = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -64,8 +64,8 @@ namespace TrungTamTinHoc.UserControls
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.panelMain.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -75,73 +75,57 @@ namespace TrungTamTinHoc.UserControls
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // phone
-            // 
-            this.phone.Text = "Phone";
-            this.phone.Width = 106;
-            // 
-            // email
-            // 
-            this.email.Text = "Email";
-            this.email.Width = 168;
-            // 
-            // ten
-            // 
-            this.ten.Text = "Last Name";
-            this.ten.Width = 104;
-            // 
-            // ho
-            // 
-            this.ho.Text = "First Name";
-            this.ho.Width = 121;
-            // 
-            // ma
-            // 
-            this.ma.Text = "ID";
-            // 
             // lv_Student
             // 
             this.lv_Student.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lv_Student.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ma,
-            this.ho,
-            this.ten,
-            this.email,
-            this.phone,
-            this.birthday});
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
             this.lv_Student.Dock = System.Windows.Forms.DockStyle.Top;
             this.lv_Student.FullRowSelect = true;
             this.lv_Student.HideSelection = false;
             this.lv_Student.Location = new System.Drawing.Point(0, 0);
             this.lv_Student.Name = "lv_Student";
             this.lv_Student.OwnerDraw = true;
-            this.lv_Student.Size = new System.Drawing.Size(726, 182);
+            this.lv_Student.Size = new System.Drawing.Size(730, 182);
             this.lv_Student.TabIndex = 0;
             this.lv_Student.UseCompatibleStateImageBehavior = false;
             this.lv_Student.View = System.Windows.Forms.View.Details;
             this.lv_Student.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.lv_Student_DrawColumnHeader);
             this.lv_Student.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.lv_Student_DrawItem);
             // 
-            // birthday
+            // columnHeader1
             // 
-            this.birthday.Text = "Birthday";
-            this.birthday.Width = 245;
+            this.columnHeader1.Text = "ID";
             // 
-            // dt_Birthday
+            // columnHeader2
             // 
-            this.dt_Birthday.Location = new System.Drawing.Point(379, 122);
-            this.dt_Birthday.Name = "dt_Birthday";
-            this.dt_Birthday.Size = new System.Drawing.Size(157, 22);
-            this.dt_Birthday.TabIndex = 11;
+            this.columnHeader2.Text = "First Name";
+            this.columnHeader2.Width = 165;
             // 
-            // label6
+            // columnHeader3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(292, 127);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 17);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Birthday";
+            this.columnHeader3.Text = "Last Name";
+            this.columnHeader3.Width = 117;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Email";
+            this.columnHeader4.Width = 104;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Phone";
+            this.columnHeader5.Width = 165;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Birthday";
+            this.columnHeader6.Width = 130;
             // 
             // imageList1
             // 
@@ -149,6 +133,18 @@ namespace TrungTamTinHoc.UserControls
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "Loading.png");
             this.imageList1.Images.SetKeyName(1, "teacher.png");
+            // 
+            // panelMain
+            // 
+            this.panelMain.BackColor = System.Drawing.Color.Transparent;
+            this.panelMain.Controls.Add(this.groupBox1);
+            this.panelMain.Controls.Add(this.btnCreate);
+            this.panelMain.Controls.Add(this.lv_Student);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelMain.Location = new System.Drawing.Point(0, 102);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(730, 446);
+            this.panelMain.TabIndex = 5;
             // 
             // groupBox1
             // 
@@ -165,12 +161,28 @@ namespace TrungTamTinHoc.UserControls
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.txtMa);
-            this.groupBox1.Location = new System.Drawing.Point(21, 204);
+            this.groupBox1.Location = new System.Drawing.Point(28, 204);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(571, 201);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông Tin Giáo Viên";
+            this.groupBox1.Text = "Thông Tin GIáo Viên";
+            // 
+            // dt_Birthday
+            // 
+            this.dt_Birthday.Location = new System.Drawing.Point(379, 122);
+            this.dt_Birthday.Name = "dt_Birthday";
+            this.dt_Birthday.Size = new System.Drawing.Size(157, 22);
+            this.dt_Birthday.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(292, 127);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 17);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Birthday";
             // 
             // txtPhone
             // 
@@ -238,6 +250,7 @@ namespace TrungTamTinHoc.UserControls
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(109, 37);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(153, 22);
@@ -249,21 +262,9 @@ namespace TrungTamTinHoc.UserControls
             this.txtMa.AutoSize = true;
             this.txtMa.Location = new System.Drawing.Point(18, 37);
             this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(82, 17);
+            this.txtMa.Size = new System.Drawing.Size(78, 17);
             this.txtMa.TabIndex = 0;
-            this.txtMa.Text = "Teacher ID:";
-            // 
-            // panelMain
-            // 
-            this.panelMain.BackColor = System.Drawing.Color.Transparent;
-            this.panelMain.Controls.Add(this.btnCreate);
-            this.panelMain.Controls.Add(this.groupBox1);
-            this.panelMain.Controls.Add(this.lv_Student);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelMain.Location = new System.Drawing.Point(0, 89);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(726, 451);
-            this.panelMain.TabIndex = 5;
+            this.txtMa.Text = "Student ID:";
             // 
             // btnCreate
             // 
@@ -291,7 +292,7 @@ namespace TrungTamTinHoc.UserControls
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(726, 46);
+            this.panel1.Size = new System.Drawing.Size(730, 46);
             this.panel1.TabIndex = 3;
             // 
             // btnRefresh
@@ -337,7 +338,7 @@ namespace TrungTamTinHoc.UserControls
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 46);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(726, 45);
+            this.panel2.Size = new System.Drawing.Size(730, 50);
             this.panel2.TabIndex = 6;
             // 
             // cbo_Select
@@ -383,12 +384,12 @@ namespace TrungTamTinHoc.UserControls
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panel1);
             this.Name = "CreateGV";
-            this.Size = new System.Drawing.Size(726, 540);
+            this.Size = new System.Drawing.Size(730, 548);
             this.Load += new System.EventHandler(this.CreateGV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panelMain.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panelMain.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -404,6 +405,21 @@ namespace TrungTamTinHoc.UserControls
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ListView lv_Student;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox cbo_Select;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dt_Birthday;
         private System.Windows.Forms.Label label6;
@@ -417,20 +433,5 @@ namespace TrungTamTinHoc.UserControls
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label txtMa;
-        private System.Windows.Forms.ListView lv_Student;
-        private System.Windows.Forms.ColumnHeader ma;
-        private System.Windows.Forms.ColumnHeader ho;
-        private System.Windows.Forms.ColumnHeader ten;
-        private System.Windows.Forms.ColumnHeader email;
-        private System.Windows.Forms.ColumnHeader phone;
-        private System.Windows.Forms.ColumnHeader birthday;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox cbo_Select;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtSearch;
     }
 }
