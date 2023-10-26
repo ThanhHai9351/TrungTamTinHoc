@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrungTamTinHoc.Forms;
+using System.IO;
 
 namespace TrungTamTinHoc
 {

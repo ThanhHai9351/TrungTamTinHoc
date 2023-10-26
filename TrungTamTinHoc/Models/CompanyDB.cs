@@ -198,5 +198,24 @@ namespace TrungTamTinHoc.Models
             reader.Close();
             return lst;
         }
+
+        public string getTeacherName(string ma)
+        {
+            List<Teacher> teachers = GetTeachers();
+            if (connection == null)
+            {
+                connection = new SqlConnection(strcon);
+            }
+            if (connection.State == ConnectionState.Closed)
+            {
+                connection.Open();
+            }
+            foreach(var item in teachers)
+            {
+                if (item.TeacherID == ma)
+                    return item.FirstName + " " + item.LastName;
+            }
+            return "0";
+        }
     }
 }

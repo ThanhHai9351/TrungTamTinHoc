@@ -115,6 +115,7 @@ namespace TrungTamTinHoc.UserControls
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(722, 46);
             this.panel1.TabIndex = 17;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // errorProvider1
             // 

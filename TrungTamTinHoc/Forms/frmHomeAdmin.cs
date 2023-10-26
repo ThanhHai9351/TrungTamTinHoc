@@ -34,6 +34,8 @@ namespace TrungTamTinHoc.Forms
         private void frmHomeAdmin_Load(object sender, EventArgs e)
         {
             hideSubMenu();
+            HomePage frm = new HomePage();
+            addUserControl(frm);
         }
 
         private void customizeDesing()
@@ -164,6 +166,12 @@ namespace TrungTamTinHoc.Forms
         private void btnReport_Click(object sender, EventArgs e)
         {
             Report frm = new Report();
+            addUserControl(frm);
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            HomePage frm = new HomePage();
             addUserControl(frm);
         }
     }

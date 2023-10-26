@@ -52,6 +52,7 @@ namespace TrungTamTinHoc.UserControls
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.btnSaveExcel = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.lv_Student = new System.Windows.Forms.ListView();
@@ -81,6 +82,7 @@ namespace TrungTamTinHoc.UserControls
             this.imageList1.Images.SetKeyName(0, "Loading.png");
             this.imageList1.Images.SetKeyName(1, "delete.png");
             this.imageList1.Images.SetKeyName(2, "edit.png");
+            this.imageList1.Images.SetKeyName(3, "excel.png");
             // 
             // errorProvider1
             // 
@@ -259,6 +261,7 @@ namespace TrungTamTinHoc.UserControls
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.Transparent;
+            this.panelMain.Controls.Add(this.btnSaveExcel);
             this.panelMain.Controls.Add(this.btnDelete);
             this.panelMain.Controls.Add(this.btnEdit);
             this.panelMain.Controls.Add(this.groupBox1);
@@ -268,6 +271,23 @@ namespace TrungTamTinHoc.UserControls
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(726, 444);
             this.panelMain.TabIndex = 5;
+            // 
+            // btnSaveExcel
+            // 
+            this.btnSaveExcel.BackColor = System.Drawing.Color.MistyRose;
+            this.btnSaveExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveExcel.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnSaveExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaveExcel.ImageKey = "excel.png";
+            this.btnSaveExcel.ImageList = this.imageList1;
+            this.btnSaveExcel.Location = new System.Drawing.Point(611, 313);
+            this.btnSaveExcel.Name = "btnSaveExcel";
+            this.btnSaveExcel.Size = new System.Drawing.Size(97, 44);
+            this.btnSaveExcel.TabIndex = 4;
+            this.btnSaveExcel.Text = "Excel";
+            this.btnSaveExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSaveExcel.UseVisualStyleBackColor = false;
+            this.btnSaveExcel.Click += new System.EventHandler(this.btnSaveExcel_Click);
             // 
             // btnDelete
             // 
@@ -485,5 +505,6 @@ namespace TrungTamTinHoc.UserControls
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnSaveExcel;
     }
 }
