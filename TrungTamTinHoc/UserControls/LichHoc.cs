@@ -31,7 +31,7 @@ namespace TrungTamTinHoc.UserControls
                 ListViewItem i = new ListViewItem(item.ClassromID);
                 i.SubItems.Add(item.ClassromName);
                 i.SubItems.Add(item.Capacity + "");
-                i.SubItems.Add(item.TeacherID);
+                i.SubItems.Add(db.getTeacherName(item.TeacherID));
                 i.SubItems.Add(item.AmountOfMoney + "");
                 lv_Class.Items.Add(i);
             }
@@ -60,7 +60,7 @@ namespace TrungTamTinHoc.UserControls
                 ListViewItem item = new ListViewItem(reader.GetString(0));
                 item.SubItems.Add(reader.GetString(1));
                 item.SubItems.Add(reader.GetInt32(2) + "");
-                item.SubItems.Add(reader.GetString(3));
+                item.SubItems.Add(db.getTeacherName(reader.GetString(3)));
                 item.SubItems.Add(reader.GetInt32(4) + "");
                 lv_Class.Items.Add(item);
             }
@@ -103,7 +103,7 @@ namespace TrungTamTinHoc.UserControls
                 ListViewItem i = new ListViewItem(reader.GetString(0));
                 i.SubItems.Add(reader.GetString(1));
                 i.SubItems.Add(reader.GetInt32(2) + "");
-                i.SubItems.Add(reader.GetString(3));
+                i.SubItems.Add(db.getTeacherName(reader.GetString(3)));
                 i.SubItems.Add(reader.GetInt32(4) + "");
                 lv_Class.Items.Add(i);
             }

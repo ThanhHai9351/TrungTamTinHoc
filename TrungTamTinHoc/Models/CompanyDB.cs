@@ -215,7 +215,26 @@ namespace TrungTamTinHoc.Models
                 if (item.TeacherID == ma)
                     return item.FirstName + " " + item.LastName;
             }
-            return "0";
+            return null;
+        }
+
+        public string getClassroomName(string ma)
+        {
+            List<Classrooms> classrooms = GetClassrooms();
+            if (connection == null)
+            {
+                connection = new SqlConnection(strcon);
+            }
+            if (connection.State == ConnectionState.Closed)
+            {
+                connection.Open();
+            }
+            foreach (var item in classrooms)
+            {
+                if (item.ClassromID == ma)
+                    return item.ClassromName;
+            }
+            return null;
         }
     }
 }

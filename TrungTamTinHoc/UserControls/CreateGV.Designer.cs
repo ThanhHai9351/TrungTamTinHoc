@@ -285,7 +285,7 @@ namespace TrungTamTinHoc.UserControls
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.BackColor = System.Drawing.Color.Turquoise;
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);

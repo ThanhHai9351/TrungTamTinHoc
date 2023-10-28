@@ -62,14 +62,15 @@ namespace TrungTamTinHoc.UserControls
                     ListViewItem item = new ListViewItem(reader.GetString(0));
                     item.SubItems.Add(reader.GetString(1));
                     item.SubItems.Add(reader.GetString(2));
-                    item.SubItems.Add(reader.GetString(3));
+                    item.SubItems.Add(db.getTeacherName(reader.GetString(3)));
                     item.SubItems.Add(reader.GetString(4));
                     item.SubItems.Add(reader.GetDateTime(5).ToString());
                     lv_Student.Items.Add(item);
                 }
                 reader.Close();
-            }    
-
+            }
+            QL_Lop frm = new QL_Lop(malop);
+            frm.ShowDialog();
         }
 
         private void lv_Class_DrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
@@ -106,7 +107,7 @@ namespace TrungTamTinHoc.UserControls
                 ListViewItem item = new ListViewItem(reader.GetString(0));
                 item.SubItems.Add(reader.GetString(1));
                 item.SubItems.Add(reader.GetInt32(2) + "");
-                item.SubItems.Add(reader.GetString(3));
+                item.SubItems.Add(db.getTeacherName(reader.GetString(3)));
                 item.SubItems.Add(reader.GetInt32(4) + "");
                 lv_Class.Items.Add(item);
             }
@@ -144,7 +145,7 @@ namespace TrungTamTinHoc.UserControls
                 ListViewItem i = new ListViewItem(item.ClassromID);
                 i.SubItems.Add(item.ClassromName);
                 i.SubItems.Add(item.Capacity + "");
-                i.SubItems.Add(item.TeacherID);
+                i.SubItems.Add(db.getTeacherName(item.TeacherID));
                 i.SubItems.Add(item.AmountOfMoney + "");
                 lv_Class.Items.Add(i);
             }
@@ -186,7 +187,7 @@ namespace TrungTamTinHoc.UserControls
                 ListViewItem i = new ListViewItem(reader.GetString(0));
                 i.SubItems.Add(reader.GetString(1));
                 i.SubItems.Add(reader.GetInt32(2) + "");
-                i.SubItems.Add(reader.GetString(3));
+                i.SubItems.Add(db.getTeacherName(reader.GetString(3)));
                 i.SubItems.Add(reader.GetInt32(4) + "");
                 lv_Class.Items.Add(i);
             }
@@ -217,7 +218,7 @@ namespace TrungTamTinHoc.UserControls
             if(lv_Student.SelectedItems.Count>0)
             {
                 ThongTinChiTiet frm = new ThongTinChiTiet(lv_Student.SelectedItems[0].SubItems[0].Text);
-                frm.Show();
+                frm.ShowDialog();
             }    
         }
 

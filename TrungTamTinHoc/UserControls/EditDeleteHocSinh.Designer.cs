@@ -48,13 +48,8 @@ namespace TrungTamTinHoc.UserControls
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.birthday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.btnSaveExcel = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.lv_Student = new System.Windows.Forms.ListView();
             this.ma = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ho = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -67,12 +62,17 @@ namespace TrungTamTinHoc.UserControls
             this.cbo_Option = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSaveExcel = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMain.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -94,6 +94,7 @@ namespace TrungTamTinHoc.UserControls
             this.dt_Birthday.Name = "dt_Birthday";
             this.dt_Birthday.Size = new System.Drawing.Size(157, 22);
             this.dt_Birthday.TabIndex = 11;
+            this.dt_Birthday.ValueChanged += new System.EventHandler(this.dt_Birthday_ValueChanged);
             // 
             // label6
             // 
@@ -103,6 +104,7 @@ namespace TrungTamTinHoc.UserControls
             this.label6.Size = new System.Drawing.Size(60, 17);
             this.label6.TabIndex = 10;
             this.label6.Text = "Birthday";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtPhone
             // 
@@ -110,6 +112,7 @@ namespace TrungTamTinHoc.UserControls
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(153, 22);
             this.txtPhone.TabIndex = 9;
+            this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
             // 
             // label5
             // 
@@ -119,6 +122,7 @@ namespace TrungTamTinHoc.UserControls
             this.label5.Size = new System.Drawing.Size(49, 17);
             this.label5.TabIndex = 8;
             this.label5.Text = "Phone";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtEmail
             // 
@@ -126,6 +130,7 @@ namespace TrungTamTinHoc.UserControls
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(153, 22);
             this.txtEmail.TabIndex = 7;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // label4
             // 
@@ -135,6 +140,7 @@ namespace TrungTamTinHoc.UserControls
             this.label4.Size = new System.Drawing.Size(46, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Email:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtLastName
             // 
@@ -142,6 +148,7 @@ namespace TrungTamTinHoc.UserControls
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(153, 22);
             this.txtLastName.TabIndex = 5;
+            this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
             // 
             // label3
             // 
@@ -151,6 +158,7 @@ namespace TrungTamTinHoc.UserControls
             this.label3.Size = new System.Drawing.Size(80, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Last Name:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtFirstName
             // 
@@ -158,6 +166,7 @@ namespace TrungTamTinHoc.UserControls
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(153, 22);
             this.txtFirstName.TabIndex = 3;
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             // 
             // label2
             // 
@@ -167,6 +176,7 @@ namespace TrungTamTinHoc.UserControls
             this.label2.Size = new System.Drawing.Size(80, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "First Name:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtId
             // 
@@ -174,6 +184,7 @@ namespace TrungTamTinHoc.UserControls
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(153, 22);
             this.txtId.TabIndex = 1;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // txtMa
             // 
@@ -183,6 +194,7 @@ namespace TrungTamTinHoc.UserControls
             this.txtMa.Size = new System.Drawing.Size(78, 17);
             this.txtMa.TabIndex = 0;
             this.txtMa.Text = "Student ID:";
+            this.txtMa.Click += new System.EventHandler(this.txtMa_Click);
             // 
             // groupBox1
             // 
@@ -205,6 +217,7 @@ namespace TrungTamTinHoc.UserControls
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Học Sinh";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // birthday
             // 
@@ -213,7 +226,7 @@ namespace TrungTamTinHoc.UserControls
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.BackColor = System.Drawing.Color.Turquoise;
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
@@ -222,30 +235,7 @@ namespace TrungTamTinHoc.UserControls
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(726, 46);
             this.panel1.TabIndex = 3;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.ForeColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.ImageKey = "Loading.png";
-            this.btnRefresh.ImageList = this.imageList1;
-            this.btnRefresh.Location = new System.Drawing.Point(631, -14);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(107, 75);
-            this.btnRefresh.TabIndex = 2;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -257,6 +247,7 @@ namespace TrungTamTinHoc.UserControls
             this.label1.Size = new System.Drawing.Size(132, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Manager Student";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panelMain
             // 
@@ -271,57 +262,7 @@ namespace TrungTamTinHoc.UserControls
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(726, 444);
             this.panelMain.TabIndex = 5;
-            // 
-            // btnSaveExcel
-            // 
-            this.btnSaveExcel.BackColor = System.Drawing.Color.MistyRose;
-            this.btnSaveExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveExcel.ForeColor = System.Drawing.Color.DarkGreen;
-            this.btnSaveExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveExcel.ImageKey = "excel.png";
-            this.btnSaveExcel.ImageList = this.imageList1;
-            this.btnSaveExcel.Location = new System.Drawing.Point(611, 313);
-            this.btnSaveExcel.Name = "btnSaveExcel";
-            this.btnSaveExcel.Size = new System.Drawing.Size(97, 44);
-            this.btnSaveExcel.TabIndex = 4;
-            this.btnSaveExcel.Text = "Excel";
-            this.btnSaveExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaveExcel.UseVisualStyleBackColor = false;
-            this.btnSaveExcel.Click += new System.EventHandler(this.btnSaveExcel_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.MistyRose;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.ForeColor = System.Drawing.Color.Red;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.ImageIndex = 1;
-            this.btnDelete.ImageList = this.imageList1;
-            this.btnDelete.Location = new System.Drawing.Point(611, 256);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(97, 44);
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.Gold;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.ImageIndex = 2;
-            this.btnEdit.ImageList = this.imageList1;
-            this.btnEdit.Location = new System.Drawing.Point(611, 197);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(97, 44);
-            this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // lv_Student
             // 
@@ -383,6 +324,7 @@ namespace TrungTamTinHoc.UserControls
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(726, 48);
             this.panel2.TabIndex = 6;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnClearSearch
             // 
@@ -444,6 +386,83 @@ namespace TrungTamTinHoc.UserControls
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(135, 26);
             this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.ForeColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.ImageKey = "Loading.png";
+            this.btnRefresh.ImageList = this.imageList1;
+            this.btnRefresh.Location = new System.Drawing.Point(631, -14);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(107, 75);
+            this.btnRefresh.TabIndex = 2;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(21, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnSaveExcel
+            // 
+            this.btnSaveExcel.BackColor = System.Drawing.Color.MistyRose;
+            this.btnSaveExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveExcel.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnSaveExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaveExcel.ImageKey = "excel.png";
+            this.btnSaveExcel.ImageList = this.imageList1;
+            this.btnSaveExcel.Location = new System.Drawing.Point(611, 313);
+            this.btnSaveExcel.Name = "btnSaveExcel";
+            this.btnSaveExcel.Size = new System.Drawing.Size(97, 44);
+            this.btnSaveExcel.TabIndex = 4;
+            this.btnSaveExcel.Text = "Excel";
+            this.btnSaveExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSaveExcel.UseVisualStyleBackColor = false;
+            this.btnSaveExcel.Click += new System.EventHandler(this.btnSaveExcel_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.MistyRose;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.Red;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.ImageIndex = 1;
+            this.btnDelete.ImageList = this.imageList1;
+            this.btnDelete.Location = new System.Drawing.Point(611, 256);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(97, 44);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.Gold;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.ImageIndex = 2;
+            this.btnEdit.ImageList = this.imageList1;
+            this.btnEdit.Location = new System.Drawing.Point(611, 197);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(97, 44);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // EditDeleteHocSinh
             // 
@@ -460,10 +479,10 @@ namespace TrungTamTinHoc.UserControls
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelMain.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

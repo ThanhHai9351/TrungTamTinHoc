@@ -174,5 +174,10 @@ namespace TrungTamTinHoc.Forms
             HomePage frm = new HomePage();
             addUserControl(frm);
         }
+
+        private void btnQLLop_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

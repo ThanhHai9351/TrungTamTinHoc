@@ -57,7 +57,7 @@ namespace TrungTamTinHoc.Forms
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.BackColor = System.Drawing.Color.Turquoise;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -89,7 +89,7 @@ namespace TrungTamTinHoc.Forms
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.GreenYellow;
+            this.groupBox1.BackColor = System.Drawing.Color.LemonChiffon;
             this.groupBox1.Controls.Add(this.dt_Birthday);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtPhone);

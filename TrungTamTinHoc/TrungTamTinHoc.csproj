@@ -93,6 +93,12 @@
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\QL_Lop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QL_Lop.Designer.cs">
+      <DependentUpon>QL_Lop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ThongTinChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QL_Lop.resx">
+      <DependentUpon>QL_Lop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ThongTinChiTiet.resx">
       <DependentUpon>ThongTinChiTiet.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +263,7 @@
     <Content Include="Image\Loading.png" />
     <Content Include="Image\Logohuit.png" />
     <Content Include="Image\logout.png" />
+    <Content Include="Image\management.png" />
     <Content Include="Image\personal-information.png" />
     <Content Include="Image\report.png" />
     <Content Include="Image\revenue.png" />

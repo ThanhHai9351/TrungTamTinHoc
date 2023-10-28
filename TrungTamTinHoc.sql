@@ -269,6 +269,7 @@ VALUES
 ('S029', 'C010', 'T010'),
 ('S030', 'C010', 'T010')
 
+
 CREATE FUNCTION SearchStudents (@searchTerm NVARCHAR(100))
 RETURNS TABLE
 AS
@@ -301,7 +302,22 @@ SELECT * FROM dbo.SearchTeachers('001');
 SELECT * FROM dbo.SearchClassrooms('001');
 
 
-
-
 select sum(AmountOfMoney) from PAYMENTS where StudentID = 'S001'
 
+select * from Classrooms
+
+update Classrooms
+set Capacity = (select count(*) from MANAGERCLASS where Classrooms.ClassroomId = MANAGERCLASS.ClassroomId)
+
+CREATE TRIGGER trg_UpdateCapacity
+ON MANAGERCLASS
+AFTER INSERT, DELETE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+  update Classrooms
+	set Capacity = (select count(*) from MANAGERCLASS where Classrooms.ClassroomId = MANAGERCLASS.ClassroomId)
+
+END;
+GO

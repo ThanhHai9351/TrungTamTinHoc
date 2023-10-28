@@ -38,6 +38,7 @@ namespace TrungTamTinHoc.UserControls
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbo_teacher = new System.Windows.Forms.ComboBox();
             this.txtMoney = new System.Windows.Forms.TextBox();
@@ -56,16 +57,15 @@ namespace TrungTamTinHoc.UserControls
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnCreate = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbo_Select
@@ -144,6 +144,23 @@ namespace TrungTamTinHoc.UserControls
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(723, 463);
             this.panelMain.TabIndex = 8;
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCreate.ImageIndex = 1;
+            this.btnCreate.ImageList = this.imageList1;
+            this.btnCreate.Location = new System.Drawing.Point(607, 220);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(97, 44);
+            this.btnCreate.TabIndex = 2;
+            this.btnCreate.Text = "Create";
+            this.btnCreate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // groupBox1
             // 
@@ -289,7 +306,7 @@ namespace TrungTamTinHoc.UserControls
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "TeacherID";
+            this.columnHeader4.Text = "Teacher";
             this.columnHeader4.Width = 173;
             // 
             // columnHeader5
@@ -299,7 +316,7 @@ namespace TrungTamTinHoc.UserControls
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.BackColor = System.Drawing.Color.Turquoise;
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
@@ -308,27 +325,6 @@ namespace TrungTamTinHoc.UserControls
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(723, 46);
             this.panel1.TabIndex = 7;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCreate.ImageIndex = 1;
-            this.btnCreate.ImageList = this.imageList1;
-            this.btnCreate.Location = new System.Drawing.Point(607, 220);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(97, 44);
-            this.btnCreate.TabIndex = 2;
-            this.btnCreate.Text = "Create";
-            this.btnCreate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCreate.UseVisualStyleBackColor = false;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnRefresh
             // 
@@ -354,6 +350,10 @@ namespace TrungTamTinHoc.UserControls
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // CreateLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -371,8 +371,8 @@ namespace TrungTamTinHoc.UserControls
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }

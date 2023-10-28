@@ -34,6 +34,8 @@ namespace TrungTamTinHoc.UserControls
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lv_Class = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -42,31 +44,30 @@ namespace TrungTamTinHoc.UserControls
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtMa = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtSiSo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtMoney = new System.Windows.Forms.TextBox();
             this.cbo_teacher = new System.Windows.Forms.ComboBox();
+            this.txtMoney = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSiSo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtMa = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbo_Select = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnSaveExcel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -76,6 +77,7 @@ namespace TrungTamTinHoc.UserControls
             this.imageList1.Images.SetKeyName(0, "Loading.png");
             this.imageList1.Images.SetKeyName(1, "delete.png");
             this.imageList1.Images.SetKeyName(2, "edit.png");
+            this.imageList1.Images.SetKeyName(3, "excel.png");
             // 
             // label1
             // 
@@ -90,7 +92,7 @@ namespace TrungTamTinHoc.UserControls
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.BackColor = System.Drawing.Color.Turquoise;
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
@@ -99,6 +101,30 @@ namespace TrungTamTinHoc.UserControls
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(721, 46);
             this.panel1.TabIndex = 10;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.ForeColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.ImageKey = "Loading.png";
+            this.btnRefresh.ImageList = this.imageList1;
+            this.btnRefresh.Location = new System.Drawing.Point(631, -14);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(107, 75);
+            this.btnRefresh.TabIndex = 2;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(21, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // errorProvider1
             // 
@@ -144,7 +170,7 @@ namespace TrungTamTinHoc.UserControls
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "TeacherID";
+            this.columnHeader4.Text = "Teacher";
             this.columnHeader4.Width = 173;
             // 
             // columnHeader5
@@ -172,63 +198,20 @@ namespace TrungTamTinHoc.UserControls
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Lớp";
             // 
-            // txtMa
+            // cbo_teacher
             // 
-            this.txtMa.AutoSize = true;
-            this.txtMa.Location = new System.Drawing.Point(18, 37);
-            this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(67, 17);
-            this.txtMa.TabIndex = 0;
-            this.txtMa.Text = "Class ID :";
+            this.cbo_teacher.FormattingEnabled = true;
+            this.cbo_teacher.Location = new System.Drawing.Point(383, 37);
+            this.cbo_teacher.Name = "cbo_teacher";
+            this.cbo_teacher.Size = new System.Drawing.Size(153, 24);
+            this.cbo_teacher.TabIndex = 10;
             // 
-            // txtId
+            // txtMoney
             // 
-            this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(109, 37);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(153, 22);
-            this.txtId.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Classname:";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(109, 81);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(153, 22);
-            this.txtName.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Capacity:";
-            // 
-            // txtSiSo
-            // 
-            this.txtSiSo.Location = new System.Drawing.Point(109, 127);
-            this.txtSiSo.Name = "txtSiSo";
-            this.txtSiSo.Size = new System.Drawing.Size(153, 22);
-            this.txtSiSo.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(292, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 17);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Teacher:";
+            this.txtMoney.Location = new System.Drawing.Point(383, 81);
+            this.txtMoney.Name = "txtMoney";
+            this.txtMoney.Size = new System.Drawing.Size(153, 22);
+            this.txtMoney.TabIndex = 9;
             // 
             // label5
             // 
@@ -239,24 +222,68 @@ namespace TrungTamTinHoc.UserControls
             this.label5.TabIndex = 8;
             this.label5.Text = "Money: ";
             // 
-            // txtMoney
+            // label4
             // 
-            this.txtMoney.Location = new System.Drawing.Point(383, 81);
-            this.txtMoney.Name = "txtMoney";
-            this.txtMoney.Size = new System.Drawing.Size(153, 22);
-            this.txtMoney.TabIndex = 9;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(292, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Teacher:";
             // 
-            // cbo_teacher
+            // txtSiSo
             // 
-            this.cbo_teacher.FormattingEnabled = true;
-            this.cbo_teacher.Location = new System.Drawing.Point(383, 37);
-            this.cbo_teacher.Name = "cbo_teacher";
-            this.cbo_teacher.Size = new System.Drawing.Size(153, 24);
-            this.cbo_teacher.TabIndex = 10;
+            this.txtSiSo.Location = new System.Drawing.Point(109, 127);
+            this.txtSiSo.Name = "txtSiSo";
+            this.txtSiSo.Size = new System.Drawing.Size(153, 22);
+            this.txtSiSo.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Capacity:";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(109, 81);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(153, 22);
+            this.txtName.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Classname:";
+            // 
+            // txtId
+            // 
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(109, 37);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(153, 22);
+            this.txtId.TabIndex = 1;
+            // 
+            // txtMa
+            // 
+            this.txtMa.AutoSize = true;
+            this.txtMa.Location = new System.Drawing.Point(18, 37);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.Size = new System.Drawing.Size(67, 17);
+            this.txtMa.TabIndex = 0;
+            this.txtMa.Text = "Class ID :";
             // 
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.Transparent;
+            this.panelMain.Controls.Add(this.btnSaveExcel);
             this.panelMain.Controls.Add(this.btnDelete);
             this.panelMain.Controls.Add(this.btnEdit);
             this.panelMain.Controls.Add(this.groupBox1);
@@ -266,6 +293,40 @@ namespace TrungTamTinHoc.UserControls
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(721, 467);
             this.panelMain.TabIndex = 11;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.MistyRose;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.Red;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.ImageIndex = 1;
+            this.btnDelete.ImageList = this.imageList1;
+            this.btnDelete.Location = new System.Drawing.Point(611, 279);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(97, 44);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.Gold;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.ImageIndex = 2;
+            this.btnEdit.ImageList = this.imageList1;
+            this.btnEdit.Location = new System.Drawing.Point(611, 220);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(97, 44);
+            this.btnEdit.TabIndex = 6;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel2
             // 
@@ -313,63 +374,22 @@ namespace TrungTamTinHoc.UserControls
             this.txtSearch.Size = new System.Drawing.Size(135, 26);
             this.txtSearch.TabIndex = 0;
             // 
-            // btnRefresh
+            // btnSaveExcel
             // 
-            this.btnRefresh.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.ForeColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.ImageKey = "Loading.png";
-            this.btnRefresh.ImageList = this.imageList1;
-            this.btnRefresh.Location = new System.Drawing.Point(631, -14);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(107, 75);
-            this.btnRefresh.TabIndex = 2;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.MistyRose;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.ForeColor = System.Drawing.Color.Red;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.ImageIndex = 1;
-            this.btnDelete.ImageList = this.imageList1;
-            this.btnDelete.Location = new System.Drawing.Point(611, 279);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(97, 44);
-            this.btnDelete.TabIndex = 7;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.Gold;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.ImageIndex = 2;
-            this.btnEdit.ImageList = this.imageList1;
-            this.btnEdit.Location = new System.Drawing.Point(611, 220);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(97, 44);
-            this.btnEdit.TabIndex = 6;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnSaveExcel.BackColor = System.Drawing.Color.MistyRose;
+            this.btnSaveExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveExcel.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnSaveExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaveExcel.ImageKey = "excel.png";
+            this.btnSaveExcel.ImageList = this.imageList1;
+            this.btnSaveExcel.Location = new System.Drawing.Point(611, 336);
+            this.btnSaveExcel.Name = "btnSaveExcel";
+            this.btnSaveExcel.Size = new System.Drawing.Size(97, 44);
+            this.btnSaveExcel.TabIndex = 8;
+            this.btnSaveExcel.Text = "Excel";
+            this.btnSaveExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSaveExcel.UseVisualStyleBackColor = false;
+            this.btnSaveExcel.Click += new System.EventHandler(this.btnSaveExcel_Click);
             // 
             // EditDeleteLop
             // 
@@ -383,13 +403,13 @@ namespace TrungTamTinHoc.UserControls
             this.Load += new System.EventHandler(this.EditDeleteLop_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panelMain.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -426,5 +446,6 @@ namespace TrungTamTinHoc.UserControls
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnSaveExcel;
     }
 }

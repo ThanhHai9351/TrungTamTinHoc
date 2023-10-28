@@ -106,7 +106,7 @@ namespace TrungTamTinHoc.UserControls
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.BackColor = System.Drawing.Color.Turquoise;
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
@@ -161,7 +161,7 @@ namespace TrungTamTinHoc.UserControls
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "TeacherID";
+            this.columnHeader4.Text = "Teacher";
             this.columnHeader4.Width = 173;
             // 
             // columnHeader5
