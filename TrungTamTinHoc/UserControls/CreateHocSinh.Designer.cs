@@ -32,7 +32,9 @@ namespace TrungTamTinHoc.UserControls
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateHocSinh));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnClearSearch = new System.Windows.Forms.Button();
@@ -41,6 +43,7 @@ namespace TrungTamTinHoc.UserControls
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dt_Birthday = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -62,15 +65,12 @@ namespace TrungTamTinHoc.UserControls
             this.phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.birthday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnCreate = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,12 +85,37 @@ namespace TrungTamTinHoc.UserControls
             this.panel1.Size = new System.Drawing.Size(723, 46);
             this.panel1.TabIndex = 0;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.ForeColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.ImageKey = "Loading.png";
+            this.btnRefresh.ImageList = this.imageList1;
+            this.btnRefresh.Location = new System.Drawing.Point(616, 0);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(107, 46);
+            this.btnRefresh.TabIndex = 2;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "Loading.png");
             this.imageList1.Images.SetKeyName(1, "add-user.png");
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(21, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -105,12 +130,13 @@ namespace TrungTamTinHoc.UserControls
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.btnClearSearch);
             this.panel2.Controls.Add(this.cbo_Select);
             this.panel2.Controls.Add(this.cbo_Option);
             this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Controls.Add(this.txtSearch);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 46);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(723, 45);
@@ -179,18 +205,41 @@ namespace TrungTamTinHoc.UserControls
             // 
             // panelMain
             // 
+            this.panelMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMain.BackColor = System.Drawing.Color.Transparent;
             this.panelMain.Controls.Add(this.btnCreate);
             this.panelMain.Controls.Add(this.groupBox1);
             this.panelMain.Controls.Add(this.lv_Student);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelMain.Location = new System.Drawing.Point(0, 89);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(723, 456);
             this.panelMain.TabIndex = 2;
             // 
+            // btnCreate
+            // 
+            this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCreate.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCreate.ImageIndex = 1;
+            this.btnCreate.ImageList = this.imageList1;
+            this.btnCreate.Location = new System.Drawing.Point(598, 222);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(97, 44);
+            this.btnCreate.TabIndex = 2;
+            this.btnCreate.Text = "Create";
+            this.btnCreate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Silver;
             this.groupBox1.Controls.Add(this.dt_Birthday);
             this.groupBox1.Controls.Add(this.label6);
@@ -213,6 +262,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // dt_Birthday
             // 
+            this.dt_Birthday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dt_Birthday.Location = new System.Drawing.Point(379, 122);
             this.dt_Birthday.Name = "dt_Birthday";
             this.dt_Birthday.Size = new System.Drawing.Size(157, 22);
@@ -220,6 +271,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(292, 127);
             this.label6.Name = "label6";
@@ -229,6 +282,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // txtPhone
             // 
+            this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPhone.Location = new System.Drawing.Point(383, 81);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(153, 22);
@@ -236,6 +291,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(292, 81);
             this.label5.Name = "label5";
@@ -245,6 +302,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // txtEmail
             // 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.Location = new System.Drawing.Point(383, 37);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(153, 22);
@@ -252,6 +311,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(292, 37);
             this.label4.Name = "label4";
@@ -261,6 +322,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // txtLastName
             // 
+            this.txtLastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtLastName.Location = new System.Drawing.Point(109, 127);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(153, 22);
@@ -268,6 +331,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(18, 127);
             this.label3.Name = "label3";
@@ -277,6 +342,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // txtFirstName
             // 
+            this.txtFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtFirstName.Location = new System.Drawing.Point(109, 81);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(153, 22);
@@ -284,6 +351,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(18, 81);
             this.label2.Name = "label2";
@@ -293,6 +362,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // txtId
             // 
+            this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtId.Location = new System.Drawing.Point(109, 37);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(153, 22);
@@ -301,6 +372,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // txtMa
             // 
+            this.txtMa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMa.AutoSize = true;
             this.txtMa.Location = new System.Drawing.Point(18, 37);
             this.txtMa.Name = "txtMa";
@@ -310,6 +383,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // lv_Student
             // 
+            this.lv_Student.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lv_Student.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lv_Student.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ma,
@@ -318,7 +393,6 @@ namespace TrungTamTinHoc.UserControls
             this.email,
             this.phone,
             this.birthday});
-            this.lv_Student.Dock = System.Windows.Forms.DockStyle.Top;
             this.lv_Student.FullRowSelect = true;
             this.lv_Student.HideSelection = false;
             this.lv_Student.Location = new System.Drawing.Point(0, 0);
@@ -365,47 +439,6 @@ namespace TrungTamTinHoc.UserControls
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // btnCreate
-            // 
-            this.btnCreate.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCreate.ImageIndex = 1;
-            this.btnCreate.ImageList = this.imageList1;
-            this.btnCreate.Location = new System.Drawing.Point(598, 222);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(97, 44);
-            this.btnCreate.TabIndex = 2;
-            this.btnCreate.Text = "Create";
-            this.btnCreate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCreate.UseVisualStyleBackColor = false;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.ForeColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.ImageKey = "Loading.png";
-            this.btnRefresh.ImageList = this.imageList1;
-            this.btnRefresh.Location = new System.Drawing.Point(631, -14);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(107, 75);
-            this.btnRefresh.TabIndex = 2;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // CreateHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -418,13 +451,13 @@ namespace TrungTamTinHoc.UserControls
             this.Load += new System.EventHandler(this.CreateHocSinh_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelMain.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

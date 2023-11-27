@@ -43,6 +43,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -67,6 +69,7 @@ namespace TrungTamTinHoc.UserControls
             // 
             // btnPhanHoi
             // 
+            this.btnPhanHoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPhanHoi.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnPhanHoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPhanHoi.ForeColor = System.Drawing.Color.White;
@@ -80,6 +83,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // txtHoTro
             // 
+            this.txtHoTro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtHoTro.Location = new System.Drawing.Point(100, 120);
             this.txtHoTro.Multiline = true;
             this.txtHoTro.Name = "txtHoTro";

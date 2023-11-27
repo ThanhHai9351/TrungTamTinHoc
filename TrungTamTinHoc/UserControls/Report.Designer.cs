@@ -70,13 +70,14 @@ namespace TrungTamTinHoc.UserControls
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.ForeColor = System.Drawing.Color.Transparent;
             this.btnRefresh.ImageKey = "Loading.png";
             this.btnRefresh.ImageList = this.imageList1;
-            this.btnRefresh.Location = new System.Drawing.Point(631, -14);
+            this.btnRefresh.Location = new System.Drawing.Point(624, 0);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(107, 75);
+            this.btnRefresh.Size = new System.Drawing.Size(107, 46);
             this.btnRefresh.TabIndex = 2;
             this.btnRefresh.UseVisualStyleBackColor = false;
             // 
@@ -110,8 +111,9 @@ namespace TrungTamTinHoc.UserControls
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 46);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(731, 45);
@@ -127,10 +129,12 @@ namespace TrungTamTinHoc.UserControls
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.txtDoanhThu);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.lv_report);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 97);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(731, 448);
@@ -156,6 +160,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // lv_report
             // 
+            this.lv_report.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lv_report.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -163,7 +169,6 @@ namespace TrungTamTinHoc.UserControls
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            this.lv_report.Dock = System.Windows.Forms.DockStyle.Top;
             this.lv_report.FullRowSelect = true;
             this.lv_report.HideSelection = false;
             this.lv_report.Location = new System.Drawing.Point(0, 0);

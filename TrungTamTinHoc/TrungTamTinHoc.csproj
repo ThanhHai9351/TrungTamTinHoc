@@ -81,6 +81,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmHomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,7 @@
     <Compile Include="Forms\ThongTinChiTiet.Designer.cs">
       <DependentUpon>ThongTinChiTiet.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Classrooms.cs" />
     <Compile Include="Models\CompanyDB.cs" />
     <Compile Include="Models\ManagerClass.cs" />

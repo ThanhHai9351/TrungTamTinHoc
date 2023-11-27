@@ -174,7 +174,7 @@ namespace TrungTamTinHoc.Forms
                 }
                 SqlCommand command = new SqlCommand();
                 command.CommandType = CommandType.Text;
-                command.CommandText = "Delete MANNAGERCLASS where StudentID = @ma";
+                command.CommandText = "Delete MANAGERCLASS where StudentID = @ma";
                 command.Connection = connection;
 
                 command.Parameters.Add("@ma", SqlDbType.Char).Value = txtId.Text.TrimEnd();

@@ -199,6 +199,34 @@ namespace TrungTamTinHoc.Models
             return lst;
         }
 
+        public List<Account> GetAccounts()
+        {
+            List<Account> lst = new List<Account>();
+            if (connection == null)
+            {
+                connection = new SqlConnection(strcon);
+            }
+            if (connection.State == ConnectionState.Closed)
+            {
+                connection.Open();
+            }
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "Select * from ACCOUNT";
+            command.Connection = connection;
+
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                Account st = new Account();
+                st.StudentID = reader.GetString(0);
+                st.Pass = reader.GetString(1);
+                lst.Add(st);
+            }
+            reader.Close();
+            return lst;
+        }
+
         public string getTeacherName(string ma)
         {
             List<Teacher> teachers = GetTeachers();

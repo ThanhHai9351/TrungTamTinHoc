@@ -57,6 +57,13 @@ CREATE TABLE MANAGERCLASS(
 	FOREIGN KEY (TeacherID) REFERENCES Teacher(TeacherID),
 )
 
+CREATE TABLE ACCOUNT
+(
+	StudentID char(10) primary key,
+	Pass char(20),
+	Constraint FK_ACCOUNT_STUDENT foreign key(StudentID) references Student(StudentID)
+)
+
 
 INSERT INTO Student 
 VALUES 
@@ -270,6 +277,38 @@ VALUES
 ('S030', 'C010', 'T010')
 
 
+insert into ACCOUNT values
+('S001', '123'),
+('S002','123'),
+('S003', '123'),
+('S004', '123'),
+('S005', '123'),
+('S006','123'),
+('S007', '123'),
+('S008', '123'),
+('S009', '123'),
+('S010', '123'),
+('S011', '123'),
+('S012', '123'),
+('S013', '123'),
+('S014', '123'),
+('S015', '123'),
+('S016', '123'),
+('S017', '123'),
+('S018','123'),
+('S019', '123'),
+('S020', '123'),
+('S021', '123'),
+('S022', '123'),
+('S023', '123'),
+('S024', '123'),
+('S025', '123'),
+('S026', '123'),
+('S027', '123'),
+('S028', '123'),
+('S029', '123'),
+('S030', '123')
+
 CREATE FUNCTION SearchStudents (@searchTerm NVARCHAR(100))
 RETURNS TABLE
 AS
@@ -321,3 +360,14 @@ BEGIN
 
 END;
 GO
+
+Create trigger updateAccount
+ON STUDENT
+AFTER INSERT
+AS
+BEGIN
+	declare @tk char(10),@mk char(20)
+	set @mk = '123';
+	Select @tk = StudentID from inserted;
+	insert into ACCOUNT values (@tk,@mk)
+END;

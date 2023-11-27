@@ -1,0 +1,6 @@
+-- với admin
+Sau khi thêm 1 lớp thì cho sang trang form mới add lịch học vào lớp
+-- với user
+xem đc lịch học mà môn mình đang học
+xem được thông tin giảng viên giảng dạy mình
+ Trang chủ: hiện thông tin các nhân của mình

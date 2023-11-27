@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrungTamTinHoc.Models;
 using TrungTamTinHoc.Forms;
 
 namespace TrungTamTinHoc
@@ -38,22 +39,58 @@ namespace TrungTamTinHoc
             }    
         }
 
+        public bool isAccountStudent(string tk, string mk)
+        {
+            CompanyDB db = new CompanyDB();
+            List<Account> accounts = db.GetAccounts();
+            foreach (var item in accounts)
+            {
+                if (item.StudentID.TrimEnd() == tk.TrimEnd() && item.Pass.TrimEnd() == mk.TrimEnd())
+                {
+                    return true; 
+                }
+            }
+            return false;
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(txtPass.Text == ""||txtUser.Text == "")
+            int status = 0;
+            CompanyDB db = new CompanyDB();
+            if(cb_isHS.Checked)
             {
-                MessageBox.Show("Bạn chưa điền đầy đủ thông tin!");
-            }    
-            else if(txtUser.Text!="admin"||txtPass.Text!="123")
+                List<Account> accounts = db.GetAccounts();
+                foreach(var item in accounts)
+                {
+                    if(isAccountStudent(txtUser.Text.TrimEnd(),txtPass.Text.TrimEnd()))
+                    {
+                        status = 1;
+                    }
+                }
+                if (status == 0)
+                {
+                    FormUser frm = new FormUser();
+                    frm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Sai tài khoản hoặc mật khẩu!");
+                }
+            }
+            else
             {
-                MessageBox.Show("Sai mật khẩu hoặc tài khoản!");
-            }    
-            if (txtUser.Text=="admin"&&txtPass.Text=="123")
-            {
-                frmHomeAdmin frm = new frmHomeAdmin();
-                frm.Show();
-                this.Hide();
-            }    
+                if (txtUser.Text.TrimEnd() == "admin" && txtPass.Text.TrimEnd() == "123")
+                {
+                    frmHomeAdmin frm = new frmHomeAdmin();
+                    frm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Sai tài khoản hoặc mật khẩu!");
+                }
+            }  
         }
 
         private void txtUser_Leave(object sender, EventArgs e)

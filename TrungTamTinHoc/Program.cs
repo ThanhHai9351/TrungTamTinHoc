@@ -18,7 +18,7 @@ namespace TrungTamTinHoc
       {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHomeAdmin());
+            Application.Run(new Login());
         }
     }
 }

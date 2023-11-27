@@ -43,6 +43,7 @@ namespace TrungTamTinHoc
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cb_isHS = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -171,12 +172,23 @@ namespace TrungTamTinHoc
             this.label1.TabIndex = 9;
             this.label1.Text = "Login";
             // 
+            // cb_isHS
+            // 
+            this.cb_isHS.AutoSize = true;
+            this.cb_isHS.Location = new System.Drawing.Point(778, 125);
+            this.cb_isHS.Name = "cb_isHS";
+            this.cb_isHS.Size = new System.Drawing.Size(107, 21);
+            this.cb_isHS.TabIndex = 17;
+            this.cb_isHS.Text = "Là Học Sinh";
+            this.cb_isHS.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(965, 450);
+            this.Controls.Add(this.cb_isHS);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
@@ -213,6 +225,7 @@ namespace TrungTamTinHoc
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox cb_isHS;
     }
 }
 

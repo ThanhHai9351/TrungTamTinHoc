@@ -102,6 +102,12 @@ namespace TrungTamTinHoc.Forms
             {
                 e.Cancel = true;
             }
+            else
+            {
+                Login frm = new Login();
+                frm.Show();
+                this.Hide();
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)

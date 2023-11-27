@@ -103,6 +103,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // lv_Student
             // 
+            this.lv_Student.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lv_Student.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lv_Student.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ma,
@@ -111,7 +113,6 @@ namespace TrungTamTinHoc.UserControls
             this.email,
             this.phone,
             this.birthday});
-            this.lv_Student.Dock = System.Windows.Forms.DockStyle.Top;
             this.lv_Student.FullRowSelect = true;
             this.lv_Student.HideSelection = false;
             this.lv_Student.Location = new System.Drawing.Point(0, 0);
@@ -132,6 +133,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // dt_Birthday
             // 
+            this.dt_Birthday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dt_Birthday.Location = new System.Drawing.Point(379, 122);
             this.dt_Birthday.Name = "dt_Birthday";
             this.dt_Birthday.Size = new System.Drawing.Size(157, 22);
@@ -139,6 +142,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(292, 127);
             this.label6.Name = "label6";
@@ -157,6 +162,9 @@ namespace TrungTamTinHoc.UserControls
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Silver;
             this.groupBox1.Controls.Add(this.dt_Birthday);
             this.groupBox1.Controls.Add(this.label6);
@@ -179,6 +187,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // txtPhone
             // 
+            this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPhone.Location = new System.Drawing.Point(383, 81);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(153, 22);
@@ -186,6 +196,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(292, 81);
             this.label5.Name = "label5";
@@ -195,6 +207,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // txtEmail
             // 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.Location = new System.Drawing.Point(383, 37);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(153, 22);
@@ -202,6 +216,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(292, 37);
             this.label4.Name = "label4";
@@ -211,6 +227,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // txtLastName
             // 
+            this.txtLastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtLastName.Location = new System.Drawing.Point(109, 127);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(153, 22);
@@ -218,6 +236,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(18, 127);
             this.label3.Name = "label3";
@@ -227,6 +247,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // txtFirstName
             // 
+            this.txtFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtFirstName.Location = new System.Drawing.Point(109, 81);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(153, 22);
@@ -234,6 +256,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(18, 81);
             this.label2.Name = "label2";
@@ -243,6 +267,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // txtId
             // 
+            this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(109, 37);
             this.txtId.Name = "txtId";
@@ -251,22 +277,26 @@ namespace TrungTamTinHoc.UserControls
             // 
             // txtMa
             // 
+            this.txtMa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMa.AutoSize = true;
             this.txtMa.Location = new System.Drawing.Point(18, 37);
             this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(78, 17);
+            this.txtMa.Size = new System.Drawing.Size(82, 17);
             this.txtMa.TabIndex = 0;
-            this.txtMa.Text = "Student ID:";
+            this.txtMa.Text = "Teacher ID:";
             // 
             // panelMain
             // 
+            this.panelMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMain.BackColor = System.Drawing.Color.Transparent;
             this.panelMain.Controls.Add(this.btnSaveExcel);
             this.panelMain.Controls.Add(this.btnDelete);
             this.panelMain.Controls.Add(this.btnEdit);
             this.panelMain.Controls.Add(this.groupBox1);
             this.panelMain.Controls.Add(this.lv_Student);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelMain.Location = new System.Drawing.Point(0, 91);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(721, 452);
@@ -274,6 +304,7 @@ namespace TrungTamTinHoc.UserControls
             // 
             // btnSaveExcel
             // 
+            this.btnSaveExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveExcel.BackColor = System.Drawing.Color.MistyRose;
             this.btnSaveExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveExcel.ForeColor = System.Drawing.Color.DarkGreen;
@@ -291,6 +322,7 @@ namespace TrungTamTinHoc.UserControls
             // 
             // btnDelete
             // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.BackColor = System.Drawing.Color.MistyRose;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.Red;
@@ -308,6 +340,7 @@ namespace TrungTamTinHoc.UserControls
             // 
             // btnEdit
             // 
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.BackColor = System.Drawing.Color.Gold;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
@@ -325,10 +358,11 @@ namespace TrungTamTinHoc.UserControls
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.cbo_Select);
             this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Controls.Add(this.txtSearch);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 46);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(721, 45);
@@ -393,13 +427,14 @@ namespace TrungTamTinHoc.UserControls
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.ForeColor = System.Drawing.Color.Transparent;
             this.btnRefresh.ImageKey = "Loading.png";
             this.btnRefresh.ImageList = this.imageList1;
-            this.btnRefresh.Location = new System.Drawing.Point(631, -14);
+            this.btnRefresh.Location = new System.Drawing.Point(614, 0);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(107, 75);
+            this.btnRefresh.Size = new System.Drawing.Size(107, 46);
             this.btnRefresh.TabIndex = 2;
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);

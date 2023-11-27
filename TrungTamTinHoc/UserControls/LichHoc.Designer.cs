@@ -93,13 +93,14 @@ namespace TrungTamTinHoc.UserControls
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.ForeColor = System.Drawing.Color.Transparent;
             this.btnRefresh.ImageKey = "Loading.png";
             this.btnRefresh.ImageList = this.imageList1;
-            this.btnRefresh.Location = new System.Drawing.Point(631, -14);
+            this.btnRefresh.Location = new System.Drawing.Point(615, 0);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(107, 75);
+            this.btnRefresh.Size = new System.Drawing.Size(107, 46);
             this.btnRefresh.TabIndex = 2;
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -123,6 +124,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // lv_Class
             // 
+            this.lv_Class.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lv_Class.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lv_Class.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
@@ -130,13 +133,12 @@ namespace TrungTamTinHoc.UserControls
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
-            this.lv_Class.Dock = System.Windows.Forms.DockStyle.Top;
             this.lv_Class.FullRowSelect = true;
             this.lv_Class.HideSelection = false;
-            this.lv_Class.Location = new System.Drawing.Point(0, 0);
+            this.lv_Class.Location = new System.Drawing.Point(0, 6);
             this.lv_Class.Name = "lv_Class";
             this.lv_Class.OwnerDraw = true;
-            this.lv_Class.Size = new System.Drawing.Size(722, 230);
+            this.lv_Class.Size = new System.Drawing.Size(722, 224);
             this.lv_Class.TabIndex = 0;
             this.lv_Class.UseCompatibleStateImageBehavior = false;
             this.lv_Class.View = System.Windows.Forms.View.Details;
@@ -171,6 +173,8 @@ namespace TrungTamTinHoc.UserControls
             // 
             // lv_LichHoc
             // 
+            this.lv_LichHoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lv_LichHoc.BackColor = System.Drawing.Color.LightSalmon;
             this.lv_LichHoc.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader6,
@@ -178,14 +182,13 @@ namespace TrungTamTinHoc.UserControls
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader10});
-            this.lv_LichHoc.Dock = System.Windows.Forms.DockStyle.Top;
             this.lv_LichHoc.FullRowSelect = true;
             this.lv_LichHoc.GridLines = true;
             this.lv_LichHoc.HideSelection = false;
-            this.lv_LichHoc.Location = new System.Drawing.Point(0, 230);
+            this.lv_LichHoc.Location = new System.Drawing.Point(0, 236);
             this.lv_LichHoc.Name = "lv_LichHoc";
             this.lv_LichHoc.OwnerDraw = true;
-            this.lv_LichHoc.Size = new System.Drawing.Size(722, 232);
+            this.lv_LichHoc.Size = new System.Drawing.Size(722, 229);
             this.lv_LichHoc.TabIndex = 1;
             this.lv_LichHoc.UseCompatibleStateImageBehavior = false;
             this.lv_LichHoc.View = System.Windows.Forms.View.Details;
@@ -223,10 +226,12 @@ namespace TrungTamTinHoc.UserControls
             // 
             // panelMain
             // 
+            this.panelMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMain.BackColor = System.Drawing.Color.Transparent;
             this.panelMain.Controls.Add(this.lv_LichHoc);
             this.panelMain.Controls.Add(this.lv_Class);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelMain.Location = new System.Drawing.Point(0, 91);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(722, 465);
@@ -234,10 +239,11 @@ namespace TrungTamTinHoc.UserControls
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.cbo_Select);
             this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Controls.Add(this.txtSearch);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 46);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(722, 45);

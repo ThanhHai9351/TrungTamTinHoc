@@ -258,5 +258,10 @@ namespace TrungTamTinHoc.UserControls
                 dt_Birthday.Enabled = true;
             }
         }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

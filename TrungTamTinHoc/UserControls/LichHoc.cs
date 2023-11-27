@@ -148,7 +148,7 @@ namespace TrungTamTinHoc.UserControls
                         i.SubItems.Add("");
                         lv_LichHoc.Items.Add(i);
                     }
-                    if (item.Ca == 2)
+                    else if (item.Ca == 2)
                     {
                         ListViewItem i = new ListViewItem(item.StartDate.ToString("dd-MM-yyyy"));
                         i.SubItems.Add("");
@@ -157,7 +157,7 @@ namespace TrungTamTinHoc.UserControls
                         i.SubItems.Add("");
                         lv_LichHoc.Items.Add(i);
                     }
-                    if (item.Ca == 3)
+                    else if (item.Ca == 3)
                     {
                         ListViewItem i = new ListViewItem(item.StartDate.ToString("dd-MM-yyyy"));
                         i.SubItems.Add("");
