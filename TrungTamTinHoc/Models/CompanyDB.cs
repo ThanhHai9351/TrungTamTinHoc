@@ -44,6 +44,17 @@ namespace TrungTamTinHoc.Models
             return lstst;
         }
 
+        public string GetStudentName (string id)
+        {
+            List<Student> st = GetStudents();
+            foreach(var item in st)
+            {
+                if (item.StudentID.TrimEnd() == id.TrimEnd())
+                    return item.FirstName +" "+item.LastName;
+            }
+            return "";
+        }
+
         public List<Teacher> GetTeachers()
         {
             List<Teacher> lsttc = new List<Teacher>();
@@ -120,7 +131,7 @@ namespace TrungTamTinHoc.Models
             }
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "select * from PAYMENTS where MoneyDate is not null";
+            command.CommandText = "select * from PAYMENTS";
             command.Connection = connection;
 
             SqlDataReader reader = command.ExecuteReader();
@@ -132,7 +143,6 @@ namespace TrungTamTinHoc.Models
                 st.ClassromID = reader.GetString(2);
                 st.AmountOfMoney = reader.GetInt32(3);
                 st.Active = reader.GetString(4);
-                st.MoneyDate = reader.GetDateTime(5);
                 lst.Add(st);
             }
             reader.Close();
@@ -227,20 +237,25 @@ namespace TrungTamTinHoc.Models
             return lst;
         }
 
+        public bool checkAccountIsvalid(string user,string pass)
+        {
+            List<Account> accounts = GetAccounts();
+            foreach(var item in accounts)
+            {
+                if(item.StudentID.TrimEnd()==user.TrimEnd()&&item.Pass.TrimEnd()==pass.TrimEnd())
+                {
+                    return true;
+                }    
+            }
+            return false;
+        }    
+
         public string getTeacherName(string ma)
         {
             List<Teacher> teachers = GetTeachers();
-            if (connection == null)
-            {
-                connection = new SqlConnection(strcon);
-            }
-            if (connection.State == ConnectionState.Closed)
-            {
-                connection.Open();
-            }
             foreach(var item in teachers)
             {
-                if (item.TeacherID == ma)
+                if (item.TeacherID.TrimEnd() == ma.TrimEnd())
                     return item.FirstName + " " + item.LastName;
             }
             return null;
@@ -249,20 +264,47 @@ namespace TrungTamTinHoc.Models
         public string getClassroomName(string ma)
         {
             List<Classrooms> classrooms = GetClassrooms();
-            if (connection == null)
-            {
-                connection = new SqlConnection(strcon);
-            }
-            if (connection.State == ConnectionState.Closed)
-            {
-                connection.Open();
-            }
             foreach (var item in classrooms)
             {
-                if (item.ClassromID == ma)
+                if (item.ClassromID.TrimEnd() == ma.TrimEnd())
                     return item.ClassromName;
             }
             return null;
+        }
+
+        public string getClassroomID(string name)
+        {
+            List<Classrooms> classrooms = GetClassrooms();
+            foreach (var item in classrooms)
+            {
+                if (item.ClassromName.TrimEnd() == name.TrimEnd())
+                    return item.ClassromID;
+            }
+            return null;
+        }
+
+        public bool checkIDPayments(string id)
+        {
+            List<Payments> p = GetPayments();
+            foreach(var item in p)
+            {
+                if (item.PaymentsID.TrimEnd() == id.TrimEnd())
+                    return true;
+            }
+            return false;
+        }
+
+        public string GetTeacherID(string name)
+        {
+            List<Teacher> t = GetTeachers();
+            foreach(var item in t)
+            {
+                if((item.FirstName.TrimEnd()+" "+item.LastName.TrimEnd())==name.TrimEnd())
+                {
+                    return item.TeacherID;
+                }    
+            }
+            return "";
         }
     }
 }

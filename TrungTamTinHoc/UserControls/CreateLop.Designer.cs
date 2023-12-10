@@ -56,6 +56,8 @@ namespace TrungTamTinHoc.UserControls
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mởLịchHọcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -63,6 +65,7 @@ namespace TrungTamTinHoc.UserControls
             this.panel2.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -143,9 +146,9 @@ namespace TrungTamTinHoc.UserControls
             this.panelMain.Controls.Add(this.btnCreate);
             this.panelMain.Controls.Add(this.groupBox1);
             this.panelMain.Controls.Add(this.lv_Class);
-            this.panelMain.Location = new System.Drawing.Point(0, 90);
+            this.panelMain.Location = new System.Drawing.Point(0, 91);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(723, 463);
+            this.panelMain.Size = new System.Drawing.Size(723, 462);
             this.panelMain.TabIndex = 8;
             // 
             // btnCreate
@@ -184,7 +187,7 @@ namespace TrungTamTinHoc.UserControls
             this.groupBox1.Controls.Add(this.txtMa);
             this.groupBox1.Location = new System.Drawing.Point(21, 220);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(571, 201);
+            this.groupBox1.Size = new System.Drawing.Size(571, 200);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Lớp";
@@ -304,6 +307,7 @@ namespace TrungTamTinHoc.UserControls
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
+            this.lv_Class.ContextMenuStrip = this.contextMenuStrip1;
             this.lv_Class.FullRowSelect = true;
             this.lv_Class.HideSelection = false;
             this.lv_Class.Location = new System.Drawing.Point(0, 0);
@@ -341,6 +345,21 @@ namespace TrungTamTinHoc.UserControls
             // 
             this.columnHeader5.Text = "Amount Of Money";
             this.columnHeader5.Width = 265;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mởLịchHọcToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(162, 28);
+            // 
+            // mởLịchHọcToolStripMenuItem
+            // 
+            this.mởLịchHọcToolStripMenuItem.Name = "mởLịchHọcToolStripMenuItem";
+            this.mởLịchHọcToolStripMenuItem.Size = new System.Drawing.Size(161, 24);
+            this.mởLịchHọcToolStripMenuItem.Text = "Mở Lịch Học";
+            this.mởLịchHọcToolStripMenuItem.Click += new System.EventHandler(this.mởLịchHọcToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -398,6 +417,7 @@ namespace TrungTamTinHoc.UserControls
             this.panelMain.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -437,5 +457,7 @@ namespace TrungTamTinHoc.UserControls
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ComboBox cbo_teacher;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem mởLịchHọcToolStripMenuItem;
     }
 }

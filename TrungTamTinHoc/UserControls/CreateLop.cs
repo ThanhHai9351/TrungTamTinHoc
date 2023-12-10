@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using TrungTamTinHoc.Models;
+using TrungTamTinHoc.Forms;
 
 namespace TrungTamTinHoc.UserControls
 {
@@ -94,6 +95,8 @@ namespace TrungTamTinHoc.UserControls
             if (ret > 0)
             {
                 MessageBox.Show("Bạn đã thêm thành công!");
+                CreateLichHoc frm = new CreateLichHoc(txtId.Text.TrimEnd());
+                frm.ShowDialog();
                 txtId.Text = "";
                 txtName.Text = "";
                 txtSiSo.Text = "";
@@ -237,6 +240,15 @@ namespace TrungTamTinHoc.UserControls
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void mởLịchHọcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(lv_Class.SelectedItems.Count > 0)
+            {
+                CreateLichHoc frm = new CreateLichHoc(lv_Class.SelectedItems[0].SubItems[0].Text.TrimEnd());
+                frm.ShowDialog();
+            }    
         }
     }
 }

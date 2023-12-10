@@ -23,7 +23,7 @@ namespace TrungTamTinHoc.UserControls
         {
 
         }
-
+        CompanyDB db = new CompanyDB();
         SqlConnection connection = null;
         public string getNameStudent(string ma)
         {
@@ -64,26 +64,7 @@ namespace TrungTamTinHoc.UserControls
             e.DrawDefault = true;
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            CompanyDB db = new CompanyDB();
-            int sum = 0;
-            List<Payments> payments = db.GetPayments().Where(row => row.MoneyDate.ToString("ddMMyyyy") == dateTimePicker1.Value.ToString("ddMMyyyy")).ToList();
-            lv_report.Items.Clear();
-            foreach(var item in payments)
-            {
-                sum += item.AmountOfMoney;
-                ListViewItem i = new ListViewItem(item.PaymentsID);
-                i.SubItems.Add(getNameStudent(item.StudentID));
-                i.SubItems.Add(getNameClassroom(item.ClassromID));
-                i.SubItems.Add(item.AmountOfMoney + "");
-                i.SubItems.Add(item.Active);
-                i.SubItems.Add(item.MoneyDate + "");
-                lv_report.Items.Add(i);
-            }
-
-            txtDoanhThu.Text = sum + "";
-        }
+      
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -104,7 +85,7 @@ namespace TrungTamTinHoc.UserControls
             }
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "select * from PAYMENTS where MoneyDate is not null";
+            command.CommandText = "select * from PAYMENTS";
             command.Connection = connection;
 
             SqlDataReader reader = command.ExecuteReader();
@@ -115,7 +96,6 @@ namespace TrungTamTinHoc.UserControls
                 item.SubItems.Add(getNameClassroom(reader.GetString(2)));
                 item.SubItems.Add(reader.GetInt32(3) + "");
                 item.SubItems.Add(reader.GetString(4));
-                item.SubItems.Add(reader.GetDateTime(5) + ""); 
                 lv_report.Items.Add(item);
             }
             reader.Close();
@@ -126,7 +106,96 @@ namespace TrungTamTinHoc.UserControls
                 sum += item.AmountOfMoney;
             }
 
-            txtDoanhThu.Text = sum + ""; 
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            CompanyDB db = new CompanyDB();
+            List<Payments> payments = db.GetPayments();
+            if (connection == null)
+            {
+                connection = new SqlConnection(db.strcon);
+            }
+            if (connection.State == ConnectionState.Closed)
+            {
+                connection.Open();
+            }
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select * from PAYMENTS";
+            command.Connection = connection;
+
+            lv_report.Items.Clear();
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                ListViewItem item = new ListViewItem(reader.GetString(0));
+                item.SubItems.Add(getNameStudent(reader.GetString(1)));
+                item.SubItems.Add(getNameClassroom(reader.GetString(2)));
+                item.SubItems.Add(reader.GetInt32(3) + "");
+                item.SubItems.Add(reader.GetString(4));
+                lv_report.Items.Add(item);
+            }
+            reader.Close();
+            txtSearch.Text = "";
+            txtMa.Text = "";
+            txtStudent.Text = "";
+            txtClass.Text = "";
+            txtMoney.Text = "";
+            txtActive.Text = "";
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if(txtSearch.Text == "")
+            {
+                MessageBox.Show("Cần nhập từ cần tìm kiếm!");
+            }
+            else
+            {
+                if (connection == null)
+                {
+                    connection = new SqlConnection(db.strcon);
+                }
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.Text;
+                command.CommandText = "select * from PAYMENTS WHERE PaymentsID LIKE '%" + txtSearch.Text.TrimEnd()+"%'";
+                command.Connection = connection;
+
+                lv_report.Items.Clear();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    ListViewItem item = new ListViewItem(reader.GetString(0));
+                    item.SubItems.Add(getNameStudent(reader.GetString(1)));
+                    item.SubItems.Add(getNameClassroom(reader.GetString(2)));
+                    item.SubItems.Add(reader.GetInt32(3) + "");
+                    item.SubItems.Add(reader.GetString(4));
+                    lv_report.Items.Add(item);
+                }
+                reader.Close();
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lv_report_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lv_report.SelectedItems.Count > 0)
+            {
+                txtMa.Text = lv_report.SelectedItems[0].SubItems[0].Text;
+                txtStudent.Text = lv_report.SelectedItems[0].SubItems[1].Text;
+                txtClass.Text = lv_report.SelectedItems[0].SubItems[2].Text;
+                txtMoney.Text = lv_report.SelectedItems[0].SubItems[3].Text;
+                txtActive.Text = lv_report.SelectedItems[0].SubItems[4].Text;
+            }
         }
     }
 }

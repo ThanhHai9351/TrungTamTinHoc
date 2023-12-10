@@ -62,12 +62,15 @@ namespace TrungTamTinHoc.UserControls
             this.cbo_Select = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mởLịchHọcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -142,6 +145,7 @@ namespace TrungTamTinHoc.UserControls
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
+            this.lv_Class.ContextMenuStrip = this.contextMenuStrip1;
             this.lv_Class.FullRowSelect = true;
             this.lv_Class.HideSelection = false;
             this.lv_Class.Location = new System.Drawing.Point(0, 0);
@@ -422,6 +426,21 @@ namespace TrungTamTinHoc.UserControls
             this.txtSearch.Size = new System.Drawing.Size(135, 26);
             this.txtSearch.TabIndex = 0;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mởLịchHọcToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
+            // 
+            // mởLịchHọcToolStripMenuItem
+            // 
+            this.mởLịchHọcToolStripMenuItem.Name = "mởLịchHọcToolStripMenuItem";
+            this.mởLịchHọcToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.mởLịchHọcToolStripMenuItem.Text = "Mở Lịch Học";
+            this.mởLịchHọcToolStripMenuItem.Click += new System.EventHandler(this.mởLịchHọcToolStripMenuItem_Click);
+            // 
             // EditDeleteLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -441,6 +460,7 @@ namespace TrungTamTinHoc.UserControls
             this.panelMain.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -478,5 +498,7 @@ namespace TrungTamTinHoc.UserControls
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnSaveExcel;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem mởLịchHọcToolStripMenuItem;
     }
 }

@@ -126,6 +126,7 @@ namespace TrungTamTinHoc
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(293, 30);
             this.txtPass.TabIndex = 13;
+            this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
             // 
             // txtUser

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using TrungTamTinHoc.Models;
+using TrungTamTinHoc.Forms;
 
 namespace TrungTamTinHoc.UserControls
 {
@@ -405,6 +406,15 @@ namespace TrungTamTinHoc.UserControls
             }
 
             ExportFile(datatable, "Danh sach", "DANH SÁCH LỚP");
+        }
+
+        private void mởLịchHọcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(lv_Class.SelectedItems.Count > 0)
+            {
+                CreateLichHoc frm = new CreateLichHoc(lv_Class.SelectedItems[0].SubItems[0].Text.TrimEnd());
+                frm.ShowDialog();
+            }    
         }
     }
 }

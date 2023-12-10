@@ -23,12 +23,13 @@ CREATE TABLE Student (
 
 CREATE TABLE Classrooms (
     ClassroomId char(10) PRIMARY KEY,
-    ClassroomName VARCHAR(50),
+    ClassroomName NVARCHAR(50),
     Capacity INT,
     TeacherID char(10) not null,
     AmountOfMoney int,
     FOREIGN KEY (TeacherID) REFERENCES Teacher(TeacherID),
 );
+
 CREATE TABLE PAYMENTS(
 	PaymentsID char(10) PRIMARY KEY,
 	StudentID char(10) not null,
@@ -39,6 +40,7 @@ CREATE TABLE PAYMENTS(
 	FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
 	FOREIGN KEY (ClassroomId) REFERENCES Classrooms(ClassroomId)
 )
+
 CREATE TABLE SCHEDULE(
 	ScheduleID char(10) PRIMARY KEY,
 	StartDate DATE,
@@ -63,7 +65,6 @@ CREATE TABLE ACCOUNT
 	Pass char(20),
 	Constraint FK_ACCOUNT_STUDENT foreign key(StudentID) references Student(StudentID)
 )
-
 
 INSERT INTO Student 
 VALUES 
@@ -371,3 +372,15 @@ BEGIN
 	Select @tk = StudentID from inserted;
 	insert into ACCOUNT values (@tk,@mk)
 END;
+
+Create trigger updateAccount1
+ON STUDENT
+AFTER DELETE
+AS
+BEGIN
+	declare @ma char(10)
+	select @ma = StudentID from deleted
+	delete ACCOUNT where StudentID = @ma;
+END;
+
+

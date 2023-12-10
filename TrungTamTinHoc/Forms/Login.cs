@@ -14,6 +14,8 @@ namespace TrungTamTinHoc
 {
     public partial class Login : Form
     {
+        CompanyDB db = new CompanyDB();
+
         public Login()
         {
             InitializeComponent();
@@ -41,7 +43,6 @@ namespace TrungTamTinHoc
 
         public bool isAccountStudent(string tk, string mk)
         {
-            CompanyDB db = new CompanyDB();
             List<Account> accounts = db.GetAccounts();
             foreach (var item in accounts)
             {
@@ -55,32 +56,26 @@ namespace TrungTamTinHoc
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            int status = 0;
-            CompanyDB db = new CompanyDB();
-            if(cb_isHS.Checked)
+            if(txtUser.Text==""||txtPass.Text=="")
             {
-                List<Account> accounts = db.GetAccounts();
-                foreach(var item in accounts)
+                MessageBox.Show("Vui lòng nhập đủ các trường!");
+            }   
+            else if(cb_isHS.Checked)
+            {
+                if(db.checkAccountIsvalid(txtUser.Text.TrimEnd(),txtPass.Text.TrimEnd()))
                 {
-                    if(isAccountStudent(txtUser.Text.TrimEnd(),txtPass.Text.TrimEnd()))
-                    {
-                        status = 1;
-                    }
-                }
-                if (status == 0)
-                {
-                    FormUser frm = new FormUser();
+                    FormUser frm = new FormUser(txtUser.Text.TrimEnd());
                     frm.Show();
                     this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Sai tài khoản hoặc mật khẩu!");
-                }
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không hợp lệ!");
+                }    
             }
-            else
+            else if (!cb_isHS.Checked)
             {
-                if (txtUser.Text.TrimEnd() == "admin" && txtPass.Text.TrimEnd() == "123")
+                if (txtUser.Text.TrimEnd()=="admin"&&txtPass.Text.TrimEnd()=="admin123")
                 {
                     frmHomeAdmin frm = new frmHomeAdmin();
                     frm.Show();
@@ -88,9 +83,10 @@ namespace TrungTamTinHoc
                 }
                 else
                 {
-                    MessageBox.Show("Sai tài khoản hoặc mật khẩu!");
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không hợp lệ!");
                 }
-            }  
+            } 
+                
         }
 
         private void txtUser_Leave(object sender, EventArgs e)
@@ -122,6 +118,11 @@ namespace TrungTamTinHoc
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
