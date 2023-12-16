@@ -185,5 +185,11 @@ namespace TrungTamTinHoc.Forms
         {
 
         }
+
+        private void btnReporting_Click(object sender, EventArgs e)
+        {
+            Reporting frm = new Reporting();
+            addUserControl(frm);
+        }
     }
 }

@@ -115,9 +115,9 @@ namespace TrungTamTinHoc.UserControls
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(82, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 17);
+            this.label1.Size = new System.Drawing.Size(88, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Report";
+            this.label1.Text = "Doanh Thu";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel3

@@ -43,6 +43,8 @@ namespace TrungTamTinHoc.UserControls
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mởLịchHọcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbo_teacher = new System.Windows.Forms.ComboBox();
             this.txtMoney = new System.Windows.Forms.TextBox();
@@ -62,15 +64,13 @@ namespace TrungTamTinHoc.UserControls
             this.cbo_Select = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mởLịchHọcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -183,6 +183,21 @@ namespace TrungTamTinHoc.UserControls
             // 
             this.columnHeader5.Text = "Amount Of Money";
             this.columnHeader5.Width = 265;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mởLịchHọcToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(162, 28);
+            // 
+            // mởLịchHọcToolStripMenuItem
+            // 
+            this.mởLịchHọcToolStripMenuItem.Name = "mởLịchHọcToolStripMenuItem";
+            this.mởLịchHọcToolStripMenuItem.Size = new System.Drawing.Size(161, 24);
+            this.mởLịchHọcToolStripMenuItem.Text = "Mở Lịch Học";
+            this.mởLịchHọcToolStripMenuItem.Click += new System.EventHandler(this.mởLịchHọcToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
@@ -388,7 +403,7 @@ namespace TrungTamTinHoc.UserControls
             this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Location = new System.Drawing.Point(0, 46);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(721, 45);
+            this.panel2.Size = new System.Drawing.Size(721, 47);
             this.panel2.TabIndex = 13;
             // 
             // cbo_Select
@@ -426,21 +441,6 @@ namespace TrungTamTinHoc.UserControls
             this.txtSearch.Size = new System.Drawing.Size(135, 26);
             this.txtSearch.TabIndex = 0;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mởLịchHọcToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
-            // 
-            // mởLịchHọcToolStripMenuItem
-            // 
-            this.mởLịchHọcToolStripMenuItem.Name = "mởLịchHọcToolStripMenuItem";
-            this.mởLịchHọcToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.mởLịchHọcToolStripMenuItem.Text = "Mở Lịch Học";
-            this.mởLịchHọcToolStripMenuItem.Click += new System.EventHandler(this.mởLịchHọcToolStripMenuItem_Click);
-            // 
             // EditDeleteLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -455,12 +455,12 @@ namespace TrungTamTinHoc.UserControls
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panelMain.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

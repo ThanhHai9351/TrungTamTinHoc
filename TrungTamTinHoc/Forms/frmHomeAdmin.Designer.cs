@@ -32,29 +32,30 @@ namespace TrungTamTinHoc.Forms
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHomeAdmin));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnReporting = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.panelClass = new System.Windows.Forms.Panel();
-            this.panelTeacher = new System.Windows.Forms.Panel();
-            this.panelStudent = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelMain = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSupport = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
+            this.panelClass = new System.Windows.Forms.Panel();
             this.btnLichHoc = new System.Windows.Forms.Button();
             this.btnThongTinLop = new System.Windows.Forms.Button();
             this.btnEditDeleteLop = new System.Windows.Forms.Button();
             this.btnAddLop = new System.Windows.Forms.Button();
             this.btnLop = new System.Windows.Forms.Button();
+            this.panelTeacher = new System.Windows.Forms.Panel();
             this.btnEditDeleteGV = new System.Windows.Forms.Button();
             this.btnThemGV = new System.Windows.Forms.Button();
             this.btnGV = new System.Windows.Forms.Button();
+            this.panelStudent = new System.Windows.Forms.Panel();
             this.btnEditDeleteHS = new System.Windows.Forms.Button();
             this.btnAddHS = new System.Windows.Forms.Button();
             this.btnHocSinh = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelClass.SuspendLayout();
             this.panelTeacher.SuspendLayout();
@@ -67,6 +68,7 @@ namespace TrungTamTinHoc.Forms
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panelMenu.Controls.Add(this.btnReporting);
             this.panelMenu.Controls.Add(this.btnExit);
             this.panelMenu.Controls.Add(this.btnSupport);
             this.panelMenu.Controls.Add(this.btnReport);
@@ -85,6 +87,26 @@ namespace TrungTamTinHoc.Forms
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
+            // btnReporting
+            // 
+            this.btnReporting.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnReporting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReporting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReporting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporting.ForeColor = System.Drawing.Color.Azure;
+            this.btnReporting.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReporting.ImageKey = "reporting.png";
+            this.btnReporting.ImageList = this.imageList1;
+            this.btnReporting.Location = new System.Drawing.Point(0, 750);
+            this.btnReporting.Name = "btnReporting";
+            this.btnReporting.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnReporting.Size = new System.Drawing.Size(176, 45);
+            this.btnReporting.TabIndex = 11;
+            this.btnReporting.Text = "Báo Cáo";
+            this.btnReporting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporting.UseVisualStyleBackColor = false;
+            this.btnReporting.Click += new System.EventHandler(this.btnReporting_Click);
+            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -102,70 +124,7 @@ namespace TrungTamTinHoc.Forms
             this.imageList1.Images.SetKeyName(10, "training.png");
             this.imageList1.Images.SetKeyName(11, "timetable.png");
             this.imageList1.Images.SetKeyName(12, "management.png");
-            // 
-            // panelClass
-            // 
-            this.panelClass.Controls.Add(this.btnLichHoc);
-            this.panelClass.Controls.Add(this.btnThongTinLop);
-            this.panelClass.Controls.Add(this.btnEditDeleteLop);
-            this.panelClass.Controls.Add(this.btnAddLop);
-            this.panelClass.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelClass.Location = new System.Drawing.Point(0, 481);
-            this.panelClass.Name = "panelClass";
-            this.panelClass.Size = new System.Drawing.Size(176, 179);
-            this.panelClass.TabIndex = 7;
-            // 
-            // panelTeacher
-            // 
-            this.panelTeacher.Controls.Add(this.btnEditDeleteGV);
-            this.panelTeacher.Controls.Add(this.btnThemGV);
-            this.panelTeacher.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTeacher.Location = new System.Drawing.Point(0, 340);
-            this.panelTeacher.Name = "panelTeacher";
-            this.panelTeacher.Size = new System.Drawing.Size(176, 96);
-            this.panelTeacher.TabIndex = 5;
-            // 
-            // panelStudent
-            // 
-            this.panelStudent.Controls.Add(this.btnEditDeleteHS);
-            this.panelStudent.Controls.Add(this.btnAddHS);
-            this.panelStudent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelStudent.Location = new System.Drawing.Point(0, 202);
-            this.panelStudent.Name = "panelStudent";
-            this.panelStudent.Size = new System.Drawing.Size(176, 93);
-            this.panelStudent.TabIndex = 3;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.label1);
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(176, 112);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Leelawadee UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(42, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hello: Admin";
-            // 
-            // panelMain
-            // 
-            this.panelMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelMain.AutoScroll = true;
-            this.panelMain.Location = new System.Drawing.Point(199, 0);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(924, 620);
-            this.panelMain.TabIndex = 1;
+            this.imageList1.Images.SetKeyName(13, "reporting.png");
             // 
             // btnExit
             // 
@@ -177,7 +136,7 @@ namespace TrungTamTinHoc.Forms
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExit.ImageKey = "logout.png";
             this.btnExit.ImageList = this.imageList1;
-            this.btnExit.Location = new System.Drawing.Point(0, 750);
+            this.btnExit.Location = new System.Drawing.Point(0, 795);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnExit.Size = new System.Drawing.Size(176, 45);
@@ -222,10 +181,22 @@ namespace TrungTamTinHoc.Forms
             this.btnReport.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnReport.Size = new System.Drawing.Size(176, 45);
             this.btnReport.TabIndex = 8;
-            this.btnReport.Text = "Báo Cáo";
+            this.btnReport.Text = "Doanh Thu";
             this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReport.UseVisualStyleBackColor = false;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
+            // panelClass
+            // 
+            this.panelClass.Controls.Add(this.btnLichHoc);
+            this.panelClass.Controls.Add(this.btnThongTinLop);
+            this.panelClass.Controls.Add(this.btnEditDeleteLop);
+            this.panelClass.Controls.Add(this.btnAddLop);
+            this.panelClass.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelClass.Location = new System.Drawing.Point(0, 481);
+            this.panelClass.Name = "panelClass";
+            this.panelClass.Size = new System.Drawing.Size(176, 179);
+            this.panelClass.TabIndex = 7;
             // 
             // btnLichHoc
             // 
@@ -328,6 +299,16 @@ namespace TrungTamTinHoc.Forms
             this.btnLop.UseVisualStyleBackColor = false;
             this.btnLop.Click += new System.EventHandler(this.btnLop_Click);
             // 
+            // panelTeacher
+            // 
+            this.panelTeacher.Controls.Add(this.btnEditDeleteGV);
+            this.panelTeacher.Controls.Add(this.btnThemGV);
+            this.panelTeacher.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTeacher.Location = new System.Drawing.Point(0, 340);
+            this.panelTeacher.Name = "panelTeacher";
+            this.panelTeacher.Size = new System.Drawing.Size(176, 96);
+            this.panelTeacher.TabIndex = 5;
+            // 
             // btnEditDeleteGV
             // 
             this.btnEditDeleteGV.BackColor = System.Drawing.Color.DodgerBlue;
@@ -388,6 +369,16 @@ namespace TrungTamTinHoc.Forms
             this.btnGV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGV.UseVisualStyleBackColor = false;
             this.btnGV.Click += new System.EventHandler(this.btnGV_Click);
+            // 
+            // panelStudent
+            // 
+            this.panelStudent.Controls.Add(this.btnEditDeleteHS);
+            this.panelStudent.Controls.Add(this.btnAddHS);
+            this.panelStudent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelStudent.Location = new System.Drawing.Point(0, 202);
+            this.panelStudent.Name = "panelStudent";
+            this.panelStudent.Size = new System.Drawing.Size(176, 93);
+            this.panelStudent.TabIndex = 3;
             // 
             // btnEditDeleteHS
             // 
@@ -471,6 +462,27 @@ namespace TrungTamTinHoc.Forms
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.label1);
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(176, 112);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Leelawadee UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(42, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 19);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Hello: Admin";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -482,6 +494,17 @@ namespace TrungTamTinHoc.Forms
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panelMain
+            // 
+            this.panelMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelMain.AutoScroll = true;
+            this.panelMain.Location = new System.Drawing.Point(199, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(924, 620);
+            this.panelMain.TabIndex = 1;
             // 
             // frmHomeAdmin
             // 
@@ -534,5 +557,6 @@ namespace TrungTamTinHoc.Forms
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Button btnLichHoc;
         private System.Windows.Forms.Button btnThongTinLop;
+        public System.Windows.Forms.Button btnReporting;
     }
 }
